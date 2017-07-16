@@ -10,6 +10,7 @@ Currently a work in progress.
 
 **TODO:**
   * Accessibility for colorblind users across all color scheme implementations.
+  * iTerm Theme
 
 ## Screenshot
 
