@@ -6,11 +6,19 @@ Currently a work in progress.
   * terminal.app profile - enlighten.terminal
 
 **In Progress:**
-  * A color scheme with multiple language support - enlighten.vim
+  * A color scheme with multiple language & highlight group support - enlighten.vim
 
 **TODO:**
   * Accessibility for colorblind users across all color scheme implementations.
-  * iTerm Theme
+  * iTerm theme.
+  * lightline theme.
+
+## Included Highlight Group
+
+Ruby, Python, Javascript, JSON, SQL, YAML, XML, HTML, CSS, Markdown, Shell, Vim's defaults (Language Constructs, Variable Types, C Family), netrw. 
+
+Will add other highlight groups once the above are completed. Possibly next being,
+Perl, php. Also am considering other add-on syntax groups like NGINX or Docker (which would require extending vim with a syntax library for these technologies).  
 
 ## Screenshot
 
