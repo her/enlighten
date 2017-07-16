@@ -1,4 +1,4 @@
-# Enlighten - A Colorscheme.
+# Enlighten - A Color Scheme.
 
 Currently a work in progress. 
 
@@ -6,7 +6,7 @@ Finished:
   * terminal.app profile - enlighten.terminal
 
 In Progress:
-  * A colorscheme with multiple language support - enlighten.vim
+  * A color scheme with multiple language support - enlighten.vim
 
 ## Notes
 
