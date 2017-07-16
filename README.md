@@ -17,8 +17,8 @@ Currently a work in progress.
 
 [Research](https://graphicdesign.stackexchange.com/a/15152) has shown that text is easier to read on a light background. Users make less mistakes and it's easier on the eyes. However, most themes for both terminal emulators and text editors across the internet cater towards light text on a dark background. 
 
-Simply browsing popular theme galleries like [iTerm's](http://iterm2colorschemes.com)
- or [Atom's](http://enrmarc.github.io/atom-theme-gallery/), one quickly notices
+Simply browsing popular theme galleries like [iTerm](http://iterm2colorschemes.com)
+ or [Atom](http://enrmarc.github.io/atom-theme-gallery/), one quickly notices
  that dark themes make up the overwhelming majority of available options.
  Indeed, Atom, Sublime, iTerm, all default to a dark background with light text upon startup. 
 
