@@ -26,9 +26,6 @@ My eyes, after having grown tired of using dark themes (especially during the da
 began searching for a light theme. In my quest of trying different light themes I found that I was compromising readability for pastel colors, low saturation, and other
 maladies that kept me from enjoying, and sticking, to a light theme.
 
-In the end I decided to take on the challenge and attempt to create a sensible
-light focused theme that everyone could agree on.
-
 The goal of this project is to develop the world's most beautiful and legible
 light theme for every day use. It should be accessible to everyone, adaptable to
 the user, and available on as many platforms as possible. Color choices should
