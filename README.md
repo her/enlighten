@@ -13,6 +13,33 @@ Currently a work in progress.
   * iTerm theme.
   * lightline theme.
 
+## But Why?
+
+[Research](https://graphicdesign.stackexchange.com/a/15152) has shown that text is easier to read on a light background. Users make less mistakes and it's easier on the eyes. However, most themes for both terminal emulators and text editors across the internet cater towards light text on a dark background. 
+
+Simply browsing popular theme galleries like [iTerm's](http://iterm2colorschemes.com)
+ or [Atom's](http://enrmarc.github.io/atom-theme-gallery/), one quickly notices
+ that dark themes make up the overwhelming majority of available options.
+ Indeed, Atom, Sublime, iTerm, all default to a dark background with light text upon startup. 
+
+My eyes, having grown tired of using dark themes, especially during the day, I
+began searching for a light theme. In my quest of trying light themes I found that I was
+compromising readability for pastel colors, low saturation, and other
+maladies that kept me from enjoying, and sticking, to a light theme.
+
+In the end I decided to take on the challenge and attempt to create a sensible
+light focused theme that everyone could agree on.
+
+The goal of this project is to develop the world's most beautiful and legible
+light theme for every day use. It should be accessible to everyone, adaptable to
+the user, and available on as many platforms as possible. Color choices should
+be based on a model of readability, of easy discernment, and where possible
+should use color theory and science to lead development decisions. 
+
+This project is currently in it's very early stages and I can't say that it lives
+up to the current stated goals. Going forward changes and developments should
+seek to uphold the ideals of this project by following it's goals. 
+
 ## Included Highlight Groups
 
 Ruby, Python, Javascript, JSON, SQL, YAML, XML, HTML, CSS, Markdown, Shell, Vim's defaults (Language Constructs, Variable Types, C Family), netrw. 
