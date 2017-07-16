@@ -13,7 +13,7 @@ Currently a work in progress.
   * iTerm theme.
   * lightline theme.
 
-## Included Highlight Group
+## Included Highlight Groups
 
 Ruby, Python, Javascript, JSON, SQL, YAML, XML, HTML, CSS, Markdown, Shell, Vim's defaults (Language Constructs, Variable Types, C Family), netrw. 
 
