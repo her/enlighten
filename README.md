@@ -2,11 +2,14 @@
 
 Currently a work in progress. 
 
-Finished: 
+**Finished:** 
   * terminal.app profile - enlighten.terminal
 
-In Progress:
+**In Progress:**
   * A color scheme with multiple language support - enlighten.vim
+
+**TODO:**
+  * Accessibility for colorblind users across all color scheme implementations.
 
 ## Screenshot
 
