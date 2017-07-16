@@ -1,4 +1,4 @@
-# Enlighten - A colorscheme.
+# Enlighten - A Colorscheme.
 
 Currently a work in progress. 
 
@@ -8,16 +8,16 @@ Finished:
 In Progress:
   * A colorscheme with multiple language support - enlighten.vim
 
-# Build Notes
+## Notes
 
-### Valuable Vim Docs
+#### Valuable Vim Docs
  `:h group-name`
  `:h highlight-groups`
  `:h cterm-colors`
 
-### If editing a colorscheme this applies it to the current buffer
+#### If editing a colorscheme this applies it to the current buffer
  `:w`
  `:so %` 
 
-### Output all the current highlight groups 
+#### Output all the current highlight groups 
  `:so $VIMRUNTIME/syntax/hitest.vim`
