@@ -8,6 +8,12 @@ Finished:
 In Progress:
   * A color scheme with multiple language support - enlighten.vim
 
+## Screenshot
+
+**Terminal output**
+![terminal
+output](https://github.com/her/enlighten/blob/master/assets/colortest0.4.0.png)
+
 ## Notes
 
 #### Valuable Vim Docs
