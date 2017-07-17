@@ -32,8 +32,8 @@ the user, and available on as many platforms as possible. Color choices should
 be based on a model of readability, easy discernment, and wherever possible
 should use color theory and science to lead development decisions. 
 
-This project is currently in it's very early stages and I can't say that it lives
-up to the current stated goals. Going forward changes and developments should
+This project is in it's early stages and I wouldn't say that it currently lives
+up to the stated goals. Going forward changes and developments should
 seek to uphold the ideals of this project by following it's goals. 
 
 ## Included Highlight Groups
