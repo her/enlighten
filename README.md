@@ -24,7 +24,7 @@ Simply browsing popular theme galleries like [iTerm](http://iterm2colorschemes.c
 
 After my eyes grew tired from using dark themes (especially during the day), I
 began searching for a light theme. In my quest to try different light themes I found that I was compromising readability with pastel colors. Low saturation and other
-maladies that kept me from enjoying and sticking to a light theme.
+maladies kept me from enjoying and sticking to a light theme.
 
 The goal of this project is to develop the world's most beautiful and legible
 light theme for every day use. It should be accessible to everyone, adaptable to
