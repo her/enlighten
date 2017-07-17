@@ -29,7 +29,7 @@ maladies that kept me from enjoying and sticking to a light theme.
 The goal of this project is to develop the world's most beautiful and legible
 light theme for every day use. It should be accessible to everyone, adaptable to
 the user, and available on as many platforms as possible. Color choices should
-be based on a model of readability, of easy discernment, and where possible
+be based on a model of readability, easy discernment, and wherever possible
 should use color theory and science to lead development decisions. 
 
 This project is currently in it's very early stages and I can't say that it lives
