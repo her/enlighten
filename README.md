@@ -22,7 +22,7 @@ Simply browsing popular theme galleries like [iTerm](http://iterm2colorschemes.c
  that dark themes make up the overwhelming majority of available options.
  Indeed, Atom, Sublime, iTerm, all default to a dark background with light text upon startup. 
 
-My eyes, after having grown tired of using dark themes (especially during the day), I
+After my eyes grew tired from using dark themes (especially during the day), I
 began searching for a light theme. In my quest of trying different light themes I found that I was compromising readability for pastel colors, low saturation, and other
 maladies that kept me from enjoying, and sticking, to a light theme.
 
