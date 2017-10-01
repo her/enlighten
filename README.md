@@ -1,4 +1,4 @@
-# Enlighten - A Color Scheme.
+# Enlighten - A Lighter Theme
 
 Currently a work in progress. 
 
