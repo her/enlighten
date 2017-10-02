@@ -4,6 +4,7 @@ Currently a work in progress.
 
 **Finished:** 
   * terminal.app profile - enlighten.terminal
+  * lightline theme.
 
 **In Progress:**
   * A color scheme with multiple language & highlight group support - enlighten.vim
@@ -11,7 +12,6 @@ Currently a work in progress.
 **TODO:**
   * Accessibility for colorblind users across all color scheme implementations.
   * iTerm theme.
-  * lightline theme.
 
 ## But Why?
 
