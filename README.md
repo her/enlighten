@@ -3,8 +3,8 @@
 Currently a work in progress. 
 
 **Finished:** 
-  * terminal.app profile - enlighten.terminal
-  * lightline theme.
+  * [enlighten.terminal](https://github.com/her/enlighten#enlightenterminal-) - terminal.app profile 
+  * enlighten.vim - lightline theme.
 
 **In Progress:**
   * A color scheme with multiple language & highlight group support - enlighten.vim
