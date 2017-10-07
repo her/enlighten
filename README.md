@@ -13,6 +13,14 @@ Currently a work in progress.
   * Accessibility for colorblind users across all color scheme implementations.
   * iTerm theme.
 
+### enlighten.terminal 👩‍🎨
+Download enlighten.terminal and open it with Terminal.app to auto import.
+
+```shell
+curl -fLo ~/Downloads/enlighten.terminal \
+  https://raw.githubusercontent.com/her/enlighten/master/enlighten.terminal
+```
+
 ## But Why?
 
 [Research](https://graphicdesign.stackexchange.com/a/15152) has shown that text is easier to read on a light background. Users make less mistakes and it's easier on the eyes. However, most themes for both terminal emulators and text editors across the internet cater towards light text on a dark background. 
