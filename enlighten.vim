@@ -1,6 +1,6 @@
 " Enlighten - A Color Scheme
 " Maintainer: Melanie Berkley <http://berkley.io>
-" Version: 0.1.0
+" Version: 1.0.0
 " License: BSD-2-Clause
 
 " Initialize Enlighten
@@ -66,13 +66,9 @@ function! s:Color(group, g_fg, g_bg, fg, bg, ...)
 endfunction
 
 " Completion Menu
-"hi Pmenu                           ctermfg=0    ctermbg=15    cterm=bold
 call s:Color("Pmenu", s:g_black, s:g_bright_white, s:black, s:bright_white)
-"hi PmenuSel                        ctermfg=15    ctermbg=12    cterm=bold
 call s:Color("PmenuSel", s:g_bright_white, s:g_bright_blue, s:bright_white, s:bright_blue) 
-"hi PmenuSbar                       ctermfg=15    ctermbg=15    cterm=none
 call s:Color("PmenuSbar", s:g_bright_white, s:g_bright_white, s:bright_white, s:bright_white)
-"hi PmenuThumb                      ctermfg=7    ctermbg=7  cterm=none
 call s:Color("PmenuThumb", s:g_white, s:g_white, s:white, s:white)
 
 "hi SpecialKey                      ctermfg=15      ctermbg=0       cterm=none
