@@ -12,74 +12,74 @@ endif
 let g:colors_name="enlighten"
 
 " Editor settings
-hi Normal                          ctermfg=none    ctermbg=none    cterm=none
+hi Normal                          ctermfg=0       ctermbg=15      cterm=none
 hi Cursor                          ctermfg=none    ctermbg=none    cterm=none
-hi CursorLine                      ctermfg=none    ctermbg=none    cterm=none
-hi LineNr                          ctermfg=none    ctermbg=none    cterm=none
-hi CursorLineNR                    ctermfg=none    ctermbg=none    cterm=none
+hi CursorLine                      ctermfg=13    ctermbg=none    cterm=none 
+hi LineNr                          ctermfg=8       ctermbg=none    cterm=none
+hi CursorLineNR                    ctermfg=0       ctermbg=none    cterm=none
 
 " Number Column
-hi CursorColumn                    ctermfg=none    ctermbg=none    cterm=none
+hi CursorColumn                    ctermfg=none    ctermbg=7       cterm=none
 hi FoldColumn                      ctermfg=none    ctermbg=none    cterm=none
-hi SignColumn                      ctermfg=none    ctermbg=none    cterm=none
+hi SignColumn                      ctermfg=none    ctermbg=15      cterm=none
 hi Folded                          ctermfg=none    ctermbg=none    cterm=none
 
 " Window & Tab Delimeters
-hi VertSplit                       ctermfg=none    ctermbg=none    cterm=none
+hi VertSplit                       ctermfg=15      ctermbg=7       cterm=none
 hi ColorColumn                     ctermfg=none    ctermbg=none    cterm=none
-hi TabLine                         ctermfg=none    ctermbg=none    cterm=none
-hi TabLineFill                     ctermfg=none    ctermbg=none    cterm=none
-hi TabLineSel                      ctermfg=none    ctermbg=none    cterm=none
+"hi TabLine                         ctermfg=none    ctermbg=none    cterm=none
+"hi TabLineFill                     ctermfg=none    ctermbg=none    cterm=none
+"hi TabLineSel                      ctermfg=none    ctermbg=none    cterm=none
 
 " File Traversal
 hi Directory                       ctermfg=none    ctermbg=none    cterm=none
-hi Search                          ctermfg=none    ctermbg=none    cterm=none
-hi IncSearch                       ctermfg=none    ctermbg=none    cterm=none
+hi Search                          ctermfg=15      ctermbg=12      cterm=none
+hi IncSearch                       ctermfg=15      ctermbg=12      cterm=none
 
 " Prompt & Status
-hi StatusLine                      ctermfg=none    ctermbg=none    cterm=none
+"hi StatusLine                      ctermfg=none    ctermbg=none    cterm=none
 hi StatusLineNC                    ctermfg=none    ctermbg=none    cterm=none
-hi WildMenu                        ctermfg=none    ctermbg=none    cterm=none
+hi WildMenu                        ctermfg=8       ctermbg=15      cterm=bold
 hi Question                        ctermfg=none    ctermbg=none    cterm=none
 hi Title                           ctermfg=none    ctermbg=none    cterm=none
-hi ModeMsg                         ctermfg=none    ctermbg=none    cterm=none
+"hi ModeMsg                         ctermfg=0       ctermbg=15      cterm=bold
 hi MoreMsg                         ctermfg=none    ctermbg=none    cterm=none
 
 " Visual Aids
-hi MatchParen                      ctermfg=none    ctermbg=none    cterm=none
-hi Visual                          ctermfg=none    ctermbg=none    cterm=none
+hi MatchParen                      ctermfg=15      ctermbg=0       cterm=none
+hi Visual                          ctermfg=none    ctermbg=7       cterm=none
 hi VisualNOS                       ctermfg=none    ctermbg=none    cterm=none
 hi NonText                         ctermfg=none    ctermbg=none    cterm=none
 
-hi Todo                            ctermfg=none    ctermbg=none    cterm=none
-hi Underlined                      ctermfg=none    ctermbg=none    cterm=none
-hi Error                           ctermfg=none    ctermbg=none    cterm=none
-hi ErrorMsg                        ctermfg=none    ctermbg=none    cterm=none
-hi WarningMsg                      ctermfg=none    ctermbg=none    cterm=none
-hi Ignore                          ctermfg=none    ctermbg=none    cterm=none
-hi SpecialKey                      ctermfg=none    ctermbg=none    cterm=none
+hi Todo                            ctermfg=none    ctermbg=14      cterm=none
+hi Underlined                      ctermfg=none    ctermbg=0       cterm=none
+hi Error                           ctermfg=15      ctermbg=9       cterm=none
+hi ErrorMsg                        ctermfg=15      ctermbg=9       cterm=none
+hi WarningMsg                      ctermfg=15      ctermbg=3       cterm=none
+hi Ignore                          ctermfg=15      ctermbg=8       cterm=none
+hi SpecialKey                      ctermfg=15      ctermbg=0       cterm=none
 
 " Diff
-hi DiffAdd                         ctermfg=none    ctermbg=none    cterm=none
-hi DiffChange                      ctermfg=none    ctermbg=none    cterm=none
-hi DiffDelete                      ctermfg=none    ctermbg=none    cterm=none
-hi DiffText                        ctermfg=none    ctermbg=none    cterm=none
+hi DiffAdd                         ctermfg=10    ctermbg=none    cterm=none
+hi DiffChange                      ctermfg=14    ctermbg=none  cterm=none
+hi DiffDelete                      ctermfg=9    ctermbg=none cterm=none
+hi DiffText                        ctermfg=5    ctermbg=none    cterm=none
 hi diffAdded                       ctermfg=none    ctermbg=none    cterm=none
 hi diffChanged                     ctermfg=none    ctermbg=none    cterm=none
 hi diffRemoved                     ctermfg=none    ctermbg=none    cterm=none
 hi diffLine                        ctermfg=none    ctermbg=none    cterm=none
 
 " Completion Menu
-hi Pmenu                           ctermfg=none    ctermbg=none    cterm=none
-hi PmenuSel                        ctermfg=none    ctermbg=none    cterm=none
-hi PmenuSbar                       ctermfg=none    ctermbg=none    cterm=none
-hi PmenuThumb                      ctermfg=none    ctermbg=none    cterm=none
+hi Pmenu                           ctermfg=0    ctermbg=15    cterm=bold
+hi PmenuSel                        ctermfg=15    ctermbg=12    cterm=bold
+hi PmenuSbar                       ctermfg=15    ctermbg=15    cterm=none
+hi PmenuThumb                      ctermfg=7    ctermbg=7  cterm=none
 
 " Spelling
-hi SpellBad                        ctermfg=none    ctermbg=none    cterm=none
-hi SpellCap                        ctermfg=none    ctermbg=none    cterm=none
-hi SpellLocal                      ctermfg=none    ctermbg=none    cterm=none
-hi SpellRare                       ctermfg=none    ctermbg=none    cterm=none
+hi SpellBad                        ctermfg=15 ctermbg=9    cterm=none
+hi SpellCap                        ctermfg=15  ctermbg=11    cterm=none
+hi SpellLocal                      ctermfg=none  ctermbg=12    cterm=none
+hi SpellRare                       ctermfg=none  ctermbg=13    cterm=none
 
 " Language Constructs
 hi Statement                       ctermfg=none    ctermbg=none    cterm=none
@@ -312,3 +312,13 @@ hi netrwClassify                   ctermfg=none    ctermbg=none    cterm=none
 hi netrwExe                        ctermfg=none    ctermbg=none    cterm=none
 hi netrwSuffixes                   ctermfg=none    ctermbg=none    cterm=none
 hi netrwTreeBar                    ctermfg=none    ctermbg=none    cterm=none
+
+" GitGutter
+" an added line
+hi GitGutterAdd ctermfg=10    ctermbg=none    cterm=none         
+" a changed line
+hi GitGutterChange ctermfg=3    ctermbg=none    cterm=none      
+" at least one removed line
+hi GitGutterDelete ctermfg=9    ctermbg=none    cterm=none      
+" a changed line followed by at least one removed line
+hi GitGutterChangeDelete ctermfg=5    ctermbg=none    cterm=none
