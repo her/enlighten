@@ -64,29 +64,27 @@ function! s:Color(group, g_fg, g_bg, fg, bg, ...)
 endfunction
 
 " Editor settings
-"hi Normal                          ctermfg=0       ctermbg=15      cterm=none
+call s:Color("Normal", "NONE", "NONE", "NONE", "NONE")
 call s:Color("Cursor", "NONE", "NONE", "NONE", "NONE")
-call s:Color("CursorLine", "NONE", s:g_white, "NONE", s:white)
+call s:Color("CursorLine", "NONE", "NONE", "NONE", "NONE", "underline")
 call s:Color("LineNr", s:g_bright_black, "NONE", s:bright_black, "NONE")
 call s:Color("CursorLineNR", s:g_black, "NONE", s:black, "NONE")
 
 " Number Column
-"hi CursorColumn                    ctermfg=none    ctermbg=7       cterm=none
-"hi FoldColumn                      ctermfg=none    ctermbg=none    cterm=none
-"hi SignColumn                      ctermfg=none    ctermbg=15      cterm=none
+call s:Color("CursorColumn", "NONE", s:g_white, "NONE", s:white)
 call s:Color("SignColumn", "NONE", s:g_bright_white, "NONE", s:bright_white)
+"hi FoldColumn                      ctermfg=none    ctermbg=none    cterm=none
 "hi Folded                          ctermfg=none    ctermbg=none    cterm=none
 
 "" Window & Tab Delimeters
-"hi VertSplit                       ctermfg=15      ctermbg=7       cterm=none
 call s:Color("VertSplit", s:g_bright_white, s:g_white, s:bright_white, s:white)
-"hi ColorColumn                     ctermfg=none    ctermbg=none    cterm=none
+call s:Color("ColorColumn", "NONE", s:g_bright_red, "NONE", s:bright_red)
 "hi TabLine                         ctermfg=none    ctermbg=none    cterm=none
 "hi TabLineFill                     ctermfg=none    ctermbg=none    cterm=none
 "hi TabLineSel                      ctermfg=none    ctermbg=none    cterm=none
 
 " File Traversal
-"hi Directory                       ctermfg=none    ctermbg=none    cterm=none
+call s:Color("Directory", s:g_blue, "NONE", s:blue, "NONE", "bold")
 call s:Color("Search", s:g_bright_white, s:g_bright_blue, s:bright_white, s:bright_blue)
 call s:Color("IncSearch", s:g_bright_white, s:g_bright_blue, s:bright_white, s:bright_blue)
 
