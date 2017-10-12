@@ -26,7 +26,7 @@ let s:g_bright_green = "#76BA67"
 let s:g_bright_yellow = "#F3AB3D"
 let s:g_bright_blue = "#5BA5EF"
 let s:g_bright_magenta = "#EC5281"
-let s:g_bright_cyan = "4DADAF"
+let s:g_bright_cyan = "#4DADAF"
 let s:g_bright_white = "#F5F5F5"
 
 " Terminal colors
@@ -73,10 +73,10 @@ call s:Color("CursorLineNR", s:g_black, "NONE", s:black, "NONE")
 " Number Column
 call s:Color("CursorColumn", "NONE", s:g_white, "NONE", s:white)
 call s:Color("SignColumn", "NONE", s:g_bright_white, "NONE", s:bright_white)
-"hi FoldColumn                      ctermfg=none    ctermbg=none    cterm=none
-"hi Folded                          ctermfg=none    ctermbg=none    cterm=none
+call s:Color("FoldColumn", s:g_blue, s:g_white, s:blue, s:white, "standout" )
+call s:Color("Folded", s:g_blue, s:g_white, s:blue, s:white, "standout" )
 
-"" Window & Tab Delimeters
+" Window & Tab Delimeters
 call s:Color("VertSplit", s:g_bright_white, s:g_white, s:bright_white, s:white)
 call s:Color("ColorColumn", "NONE", s:g_bright_red, "NONE", s:bright_red)
 "hi TabLine                         ctermfg=none    ctermbg=none    cterm=none
@@ -84,32 +84,38 @@ call s:Color("ColorColumn", "NONE", s:g_bright_red, "NONE", s:bright_red)
 "hi TabLineSel                      ctermfg=none    ctermbg=none    cterm=none
 
 " File Traversal
-call s:Color("Directory", s:g_blue, "NONE", s:blue, "NONE", "bold")
+call s:Color("Directory", s:g_blue, "NONE", s:blue, "NONE")
 call s:Color("Search", s:g_bright_white, s:g_bright_blue, s:bright_white, s:bright_blue)
 call s:Color("IncSearch", s:g_bright_white, s:g_bright_blue, s:bright_white, s:bright_blue)
 
 " Prompt & Status
+call s:Color("Title", s:g_magenta, "NONE", s:magenta, "NONE", "bold")
+call s:Color("Question", s:g_green, "NONE", s:green, "NONE")
+call s:Color("WildMenu", "NONE", s:g_bright_white, "NONE", s:bright_white)
+call s:Color("MoreMsg", s:g_green, "NONE", s:green, "NONE", "bold")
 "hi StatusLine                      ctermfg=none    ctermbg=none    cterm=none
 "hi StatusLineNC                    ctermfg=none    ctermbg=none    cterm=none
-"hi WildMenu                        ctermfg=8       ctermbg=15      cterm=bold
-"hi Question                        ctermfg=none    ctermbg=none    cterm=none
-"hi Title                           ctermfg=none    ctermbg=none    cterm=none
 "hi ModeMsg                         ctermfg=0       ctermbg=15      cterm=bold
-"hi MoreMsg                         ctermfg=none    ctermbg=none    cterm=none
 
 " Visual Aids
-"hi MatchParen                      ctermfg=15      ctermbg=0       cterm=none
-"hi Visual                          ctermfg=none    ctermbg=7       cterm=none
-"hi VisualNOS                       ctermfg=none    ctermbg=none    cterm=none
-"hi NonText                         ctermfg=none    ctermbg=none    cterm=none
+call s:Color("MatchParen", "NONE", s:g_bright_cyan, "NONE", s:bright_cyan)
+call s:Color("Visual", "NONE", s:g_white, "NONE", s:white)
+call s:Color("VisualNOS", s:g_black, s:g_white, s:black, s:white)
+call s:Color("NonText", s:g_bright_blue, "NONE", s:bright_blue, "NONE")
 
-"hi Todo                            ctermfg=none    ctermbg=14      cterm=none
-"hi Underlined                      ctermfg=none    ctermbg=0       cterm=none
-"hi Error                           ctermfg=15      ctermbg=9       cterm=none
-"hi ErrorMsg                        ctermfg=15      ctermbg=9       cterm=none
-"hi WarningMsg                      ctermfg=15      ctermbg=3       cterm=none
-"hi Ignore                          ctermfg=15      ctermbg=8       cterm=none
+call s:Color("Todo", s:g_bright_white, s:g_yellow, s:bright_white, s:yellow)
+call s:Color("Error", s:g_bright_white, s:g_bright_red, s:bright_white, s:bright_red)
+call s:Color("ErrorMsg", s:g_bright_white, s:g_bright_red, s:bright_white, s:bright_red)
+call s:Color("WarningMsg", s:g_bright_white, s:g_yellow, s:bright_white, s:yellow)
 call s:Color("SpecialKey", s:g_black, s:g_bright_white, s:black, s:bright_white, "underline")
+"hi Underlined                      ctermfg=none    ctermbg=0       cterm=none
+"hi Ignore                          ctermfg=15      ctermbg=8       cterm=none
+
+" Completion Menu
+call s:Color("Pmenu", s:g_black, s:g_bright_white, s:black, s:bright_white)
+call s:Color("PmenuSel", s:g_bright_white, s:g_bright_blue, s:bright_white, s:bright_blue) 
+call s:Color("PmenuSbar", s:g_bright_white, s:g_bright_white, s:bright_white, s:bright_white)
+call s:Color("PmenuThumb", s:g_white, s:g_white, s:white, s:white)
 
 "" Diff
 "hi DiffAdd                         ctermfg=10    ctermbg=none    cterm=none
@@ -121,18 +127,12 @@ call s:Color("SpecialKey", s:g_black, s:g_bright_white, s:black, s:bright_white,
 "hi diffRemoved                     ctermfg=none    ctermbg=none    cterm=none
 "hi diffLine                        ctermfg=none    ctermbg=none    cterm=none
 
-" Completion Menu
-call s:Color("Pmenu", s:g_black, s:g_bright_white, s:black, s:bright_white)
-call s:Color("PmenuSel", s:g_bright_white, s:g_bright_blue, s:bright_white, s:bright_blue) 
-call s:Color("PmenuSbar", s:g_bright_white, s:g_bright_white, s:bright_white, s:bright_white)
-call s:Color("PmenuThumb", s:g_white, s:g_white, s:white, s:white)
-
 "" Spelling
 "hi SpellBad                        ctermfg=15 ctermbg=9    cterm=none
 "hi SpellCap                        ctermfg=15  ctermbg=11    cterm=none
 "hi SpellLocal                      ctermfg=none  ctermbg=12    cterm=none
 "hi SpellRare                       ctermfg=none  ctermbg=13    cterm=none
-"
+
 "" Language Constructs
 "hi Statement                       ctermfg=none    ctermbg=none    cterm=none
 "hi Conditional                     ctermfg=5    	 ctermbg=none    cterm=none
@@ -142,14 +142,14 @@ call s:Color("PmenuThumb", s:g_white, s:g_white, s:white, s:white)
 "hi Keyword                         ctermfg=none    ctermbg=none    cterm=none
 "hi Exception                       ctermfg=none    ctermbg=none    cterm=none
 "hi Comment                         ctermfg=4    	 ctermbg=none    cterm=none
-"
+
 "hi Special                         ctermfg=none    ctermbg=none    cterm=none
 "hi SpecialChar                     ctermfg=none    ctermbg=none    cterm=none
 "hi Tag                             ctermfg=none    ctermbg=none    cterm=none
 "hi Delimiter                       ctermfg=none    ctermbg=none    cterm=none
 "hi SpecialComment                  ctermfg=none    ctermbg=none    cterm=none
 "hi Debug                           ctermfg=none    ctermbg=none    cterm=none
-"
+
 "" Variable Types
 "hi Constant                        ctermfg=2    	 ctermbg=none    cterm=none
 "hi String                          ctermfg=0    	 ctermbg=none    cterm=none
@@ -158,10 +158,19 @@ call s:Color("PmenuThumb", s:g_white, s:g_white, s:white, s:white)
 "hi Number                          ctermfg=1    	 ctermbg=none    cterm=none
 "hi Boolean                         ctermfg=none    ctermbg=none    cterm=none
 "hi Float                           ctermfg=1       ctermbg=none    cterm=none
-"
+
 "hi Identifier                      ctermfg=none    ctermbg=none    cterm=none
 "hi Function                        ctermfg=none    ctermbg=none    cterm=none
-"
+
+" IndentLine
+call s:Color("Conceal", s:g_black, s:g_bright_white, s:black, s:bright_white)
+
+" GitGutter
+call s:Color("GitGutterAdd", s:g_bright_green, s:g_bright_white, s:bright_green, s:bright_white)
+call s:Color("GitGutterChange", s:g_yellow, s:g_bright_white, s:yellow, s:bright_white)
+call s:Color("GitGutterDelete", s:g_bright_red, s:g_bright_white, s:bright_red, s:bright_white)
+call s:Color("GitGutterChangeDelete", s:g_magenta, s:g_bright_white, s:magenta, s:bright_white)
+
 "" C Family
 "hi PreProc                         ctermfg=none    ctermbg=none    cterm=none
 "hi Include                         ctermfg=none    ctermbg=none    cterm=none
@@ -365,12 +374,3 @@ call s:Color("PmenuThumb", s:g_white, s:g_white, s:white, s:white)
 "hi netrwSuffixes                   ctermfg=none    ctermbg=none    cterm=none
 "hi netrwTreeBar                    ctermfg=none    ctermbg=none    cterm=none
 call s:Color("netrwTreeBar", s:g_black, "NONE", s:black, "NONE")
-
-" IndentLine
-call s:Color("Conceal", s:g_black, s:g_bright_white, s:black, s:bright_white)
-
-" GitGutter
-call s:Color("GitGutterAdd", s:g_bright_green, s:g_bright_white, s:bright_green, s:bright_white)
-call s:Color("GitGutterChange", s:g_yellow, s:g_bright_white, s:yellow, s:bright_white)
-call s:Color("GitGutterDelete", s:g_bright_red, s:g_bright_white, s:bright_red, s:bright_white)
-call s:Color("GitGutterChangeDelete", s:g_magenta, s:g_bright_white, s:magenta, s:bright_white)
