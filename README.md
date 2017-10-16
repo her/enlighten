@@ -4,14 +4,12 @@ Currently a work in progress.
 
 **Finished:** 
   * [enlighten.terminal](https://github.com/her/enlighten#enlightenterminal-) - terminal.app profile 
-  * enlighten.vim - lightline theme.
 
 **In Progress:**
   * A color scheme with multiple language & highlight group support - enlighten.vim
 
 **TODO:**
   * Accessibility for colorblind users across all color scheme implementations.
-  * iTerm theme.
 
 ### enlighten.terminal 👩‍🎨
 Download enlighten.terminal and open it with Terminal.app to auto import.
