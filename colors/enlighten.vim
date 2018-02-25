@@ -1,6 +1,6 @@
 " Enlighten - A Color Scheme
 " Maintainer: Melanie Berkley <http://berkley.io>
-" Version: 1.0.0
+" Version: 1.1.0
 " License: BSD-2-Clause
 
 " Initialize Enlighten
@@ -118,14 +118,10 @@ call s:Color("PmenuSbar", s:g_bright_white, s:g_bright_white, s:bright_white, s:
 call s:Color("PmenuThumb", s:g_white, s:g_white, s:white, s:white)
 
 "" Diff
-"hi DiffAdd                         ctermfg=10    ctermbg=none    cterm=none
-"hi DiffChange                      ctermfg=14    ctermbg=none  cterm=none
-"hi DiffDelete                      ctermfg=9    ctermbg=none cterm=none
-"hi DiffText                        ctermfg=5    ctermbg=none    cterm=none
-"hi diffAdded                       ctermfg=none    ctermbg=none    cterm=none
-"hi diffChanged                     ctermfg=none    ctermbg=none    cterm=none
-"hi diffRemoved                     ctermfg=none    ctermbg=none    cterm=none
-"hi diffLine                        ctermfg=none    ctermbg=none    cterm=none
+call s:Color("DiffAdd", s:g_green, s:g_bright_green, s:green, s:bright_green, "bold")
+call s:Color("DiffChange", s:g_black, s:g_bright_yellow, s:black, s:bright_yellow, "bold")
+call s:Color("DiffText", s:g_black, s:g_yellow, s:black, s:yellow, "bold")
+call s:Color("DiffDelete", s:g_bright_red, s:g_bright_magenta, s:bright_red, s:bright_magenta, "bold")
 
 "" Spelling
 "hi SpellBad                        ctermfg=15 ctermbg=9    cterm=none
