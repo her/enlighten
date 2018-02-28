@@ -98,7 +98,7 @@ call s:Color("MoreMsg", s:g_green, "NONE", s:green, "NONE", "bold")
 "hi ModeMsg                         ctermfg=0       ctermbg=15      cterm=bold
 
 " Visual Aids
-call s:Color("MatchParen", "NONE", s:g_bright_cyan, "NONE", s:bright_cyan)
+call s:Color("MatchParen", "NONE", s:g_bright_red, s:bright_white, s:bright_blue, "bold")
 call s:Color("Visual", "NONE", s:g_white, "NONE", s:white)
 call s:Color("VisualNOS", s:g_black, s:g_white, s:black, s:white)
 call s:Color("NonText", s:g_bright_blue, "NONE", s:bright_blue, "NONE")
