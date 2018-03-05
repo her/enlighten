@@ -4,7 +4,7 @@
 " License: BSD-2-Clause
 
 " Initialize Enlighten
-set background=light	
+set background=light
 hi clear
 if exists("syntax_on")
     syntax reset
@@ -89,14 +89,20 @@ call s:Color("Directory", s:g_blue, "NONE", s:blue, "NONE")
 call s:Color("Search", s:g_bright_white, s:g_bright_blue, s:bright_white, s:bright_blue)
 call s:Color("IncSearch", s:g_bright_white, s:g_bright_blue, s:bright_white, s:bright_blue)
 
-" Prompt & Status
-call s:Color("Title", s:g_magenta, "NONE", s:magenta, "NONE", "bold")
+" Statusline
+call s:Color("StatusLine", s:g_black, s:g_bright_white, s:blue, s:bright_white, "bold")
+call s:Color("WildMenu", "NONE", s:g_bright_white, s:blue, s:white, "bold")
+call s:Color("StatusLineNC", s:g_black, s:g_bright_white, s:white, s:bright_white)
+
+" Prompt
+" Swap file warnings, etc.
 call s:Color("Question", s:g_green, "NONE", s:green, "NONE")
-call s:Color("WildMenu", "NONE", s:g_bright_white, "NONE", s:bright_white)
+" --- Titles ---
+call s:Color("Title", s:g_magenta, "NONE", s:magenta, "NONE", "bold")
+" -- More --
 call s:Color("MoreMsg", s:g_green, "NONE", s:green, "NONE", "bold")
-"hi StatusLine                      ctermfg=none    ctermbg=none    cterm=none
-"hi StatusLineNC                    ctermfg=none    ctermbg=none    cterm=none
-"hi ModeMsg                         ctermfg=0       ctermbg=15      cterm=bold
+" -- INSERT --, -- VISUAL --, -- REPLACE --
+call s:Color("ModeMsg", s:g_black, s:g_bright_white, s:black, s:bright_white, "bold") " TODO: Conditionally highlight
 
 " Visual Aids
 call s:Color("MatchParen", "NONE", s:g_bright_red, s:bright_white, s:bright_blue, "bold")
