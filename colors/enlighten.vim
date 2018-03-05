@@ -1,6 +1,6 @@
 " Enlighten - A Color Scheme
 " Maintainer: Melanie Berkley <http://berkley.io>
-" Version: 1.1.0
+" Version: 1.2.0
 " License: BSD-2-Clause
 
 " Initialize Enlighten
