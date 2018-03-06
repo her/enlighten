@@ -203,7 +203,19 @@ call s:Color("GitGutterChangeDelete", s:g_magenta, s:g_bright_white, s:magenta, 
 "hi rubyCurlyBlock                  ctermfg=none    ctermbg=none    cterm=none
 "hi rubyCurlyBlockDelimiter         ctermfg=none    ctermbg=none    cterm=none
 "hi rubyArrayDelimiter              ctermfg=none    ctermbg=none    cterm=none
+
 "hi rubyStringDelimiter             ctermfg=none    ctermbg=none    cterm=none
+call s:Color("rubyStringDelimiter", "NONE", "NONE", s:blue, s:bright_white)
+call s:Color("rubyString", "NONE", "NONE", s:blue, s:bright_white)
+call s:Color("rubySymbol", "NONE","NONE", s:bright_magenta, s:bright_white)
+call s:Color("rubyInteger", "NONE", "NONE", s:bright_red, s:bright_white)
+call s:Color("rubyInterpolationDelimiter", "NONE", "NONE", s:green, s:bright_white)
+call s:Color("rubyComment", "NONE", "NONE", s:bright_black, s:bright_white)
+"call s:Color("rubyCurlyBlock", "NONE","NONE", s:red, s:bright_white)
+"call s:Color("rubyMethodBlock", "NONE", "NONE", s:red, s:bright_white)
+"call s:Color("rubyDoBlock", "NONE", "NONE", s:red, s:bright_white)
+"call s:Color("rubyLocalVariableOrMethod", "NONE", "NONE", s:red, s:bright_white)
+
 "hi rubyInterpolationDelimiter      ctermfg=none    ctermbg=none    cterm=none
 "hi rubyConditional                 ctermfg=none    ctermbg=none    cterm=none
 "hi rubyRepeat                      ctermfg=none    ctermbg=none    cterm=none
