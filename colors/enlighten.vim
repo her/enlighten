@@ -47,7 +47,8 @@ let s:bright_magenta = "13"
 let s:bright_cyan = "14"
 let s:bright_white = "15"
 
-" Color function
+" s:Color(options={})
+"
 " s:Color('HighlightGroup', s:gui_foreground, s:gui_background, s:term_foreground, s:term_background, 'display_mode')
 " ex. call s:Color("Normal",   s:g_black,  s:g_white,  s:black,  s:white)
 function! s:Color(group, g_fg, g_bg, fg, bg, ...)
