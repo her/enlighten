@@ -102,8 +102,8 @@ call s:Color("Question", s:g_green, "NONE", s:green, "NONE")
 call s:Color("Title", s:g_magenta, "NONE", s:magenta, "NONE", "bold")
 " -- More --
 call s:Color("MoreMsg", s:g_green, "NONE", s:green, "NONE", "bold")
-" -- INSERT --, -- VISUAL --, -- REPLACE --
-call s:Color("ModeMsg", s:g_black, s:g_bright_white, s:black, s:bright_white, "bold") " TODO: Conditionally highlight
+" -- INSERT --, -- VISUAL --, -- REPLACE -- TODO: Conditionall highlight this ModeMsg
+call s:Color("ModeMsg", s:g_black, s:g_bright_white, s:black, s:bright_white, "bold")
 
 " Visual Aids
 call s:Color("MatchParen", "NONE", s:g_bright_red, s:bright_white, s:bright_blue, "bold")
