@@ -79,11 +79,11 @@ call s:Color("FoldColumn", s:g_blue, s:g_white, s:blue, s:white, "standout" )
 call s:Color("Folded", s:g_blue, s:g_white, s:blue, s:white, "standout" )
 
 " Window & Tab Delimeters
-call s:Color("VertSplit", s:g_bright_white, s:g_white, s:bright_white, s:white)
+call s:Color("VertSplit", s:g_bright_white, s:g_white, s:black, s:bright_white)
 call s:Color("ColorColumn", "NONE", s:g_bright_red, "NONE", s:bright_red)
-"hi TabLine                         ctermfg=none    ctermbg=none    cterm=none
-"hi TabLineFill                     ctermfg=none    ctermbg=none    cterm=none
-"hi TabLineSel                      ctermfg=none    ctermbg=none    cterm=none
+"hi TabLine
+"hi TabLineFill
+"hi TabLineSel
 
 " File Traversal
 call s:Color("Directory", s:g_blue, "NONE", s:blue, "NONE")
@@ -132,39 +132,39 @@ call s:Color("DiffText", s:g_black, s:g_yellow, s:black, s:yellow, "bold")
 call s:Color("DiffDelete", s:g_bright_red, s:g_bright_magenta, s:bright_red, s:bright_magenta, "bold")
 
 "" Spelling
-"hi SpellBad                        ctermfg=15 ctermbg=9    cterm=none
-"hi SpellCap                        ctermfg=15  ctermbg=11    cterm=none
-"hi SpellLocal                      ctermfg=none  ctermbg=12    cterm=none
-"hi SpellRare                       ctermfg=none  ctermbg=13    cterm=none
+"hi SpellBad
+"hi SpellCap
+"hi SpellLocal
+"hi SpellRare
 
 "" Language Constructs
-"hi Statement                       ctermfg=none    ctermbg=none    cterm=none
-"hi Conditional                     ctermfg=5    	 ctermbg=none    cterm=none
-"hi Repeat                          ctermfg=none    ctermbg=none    cterm=none
-"hi Label                           ctermfg=none    ctermbg=none    cterm=none
-"hi Operator                        ctermfg=none    ctermbg=none    cterm=none
-"hi Keyword                         ctermfg=none    ctermbg=none    cterm=none
-"hi Exception                       ctermfg=none    ctermbg=none    cterm=none
-"hi Comment                         ctermfg=4    	 ctermbg=none    cterm=none
+"hi Statement
+"hi Conditional
+"hi Repeat
+"hi Label
+"hi Operator
+"hi Keyword
+"hi Exception
+"hi Comment
 
-"hi Special                         ctermfg=none    ctermbg=none    cterm=none
-"hi SpecialChar                     ctermfg=none    ctermbg=none    cterm=none
-"hi Tag                             ctermfg=none    ctermbg=none    cterm=none
-"hi Delimiter                       ctermfg=none    ctermbg=none    cterm=none
-"hi SpecialComment                  ctermfg=none    ctermbg=none    cterm=none
-"hi Debug                           ctermfg=none    ctermbg=none    cterm=none
+"hi Special
+"hi SpecialChar
+"hi Tag
+"hi Delimiter
+"hi SpecialComment
+"hi Debug
 
 "" Variable Types
-"hi Constant                        ctermfg=2    	 ctermbg=none    cterm=none
-"hi String                          ctermfg=0    	 ctermbg=none    cterm=none
-"hi StringDelimiter                 ctermfg=none    ctermbg=none    cterm=none
-"hi Character                       ctermfg=none    ctermbg=none    cterm=none
-"hi Number                          ctermfg=1    	 ctermbg=none    cterm=none
-"hi Boolean                         ctermfg=none    ctermbg=none    cterm=none
-"hi Float                           ctermfg=1       ctermbg=none    cterm=none
+"hi Constant
+"hi String
+"hi StringDelimiter
+"hi Character
+"hi Number
+"hi Boolean
+"hi Float
 
-"hi Identifier                      ctermfg=none    ctermbg=none    cterm=none
-"hi Function                        ctermfg=none    ctermbg=none    cterm=none
+"hi Identifier
+"hi Function
 
 " IndentLine
 call s:Color("Conceal", s:g_black, s:g_bright_white, s:black, s:bright_white)
@@ -176,217 +176,208 @@ call s:Color("GitGutterDelete", s:g_bright_red, s:g_bright_white, s:bright_red, 
 call s:Color("GitGutterChangeDelete", s:g_magenta, s:g_bright_white, s:magenta, s:bright_white)
 
 "" C Family
-"hi PreProc                         ctermfg=none    ctermbg=none    cterm=none
-"hi Include                         ctermfg=none    ctermbg=none    cterm=none
-"hi Define                          ctermfg=6       ctermbg=none    cterm=bold
-"hi Macro                           ctermfg=none    ctermbg=none    cterm=none
-"hi PreCondit                       ctermfg=none    ctermbg=none    cterm=none
-"
-"hi Type                            ctermfg=none    ctermbg=none    cterm=none
-"hi StorageClass                    ctermfg=none    ctermbg=none    cterm=none
-"hi Structure                       ctermfg=none    ctermbg=none    cterm=none
-"hi Typedef                         ctermfg=none    ctermbg=none    cterm=none
+"hi PreProc
+"hi Include
+"hi Define
+"hi Macro
+"hi PreCondit
+
+"hi Type
+"hi StorageClass
+"hi Structure
+"hi Typedef
 "
 "" Ruby
-"hi rubyModule                      ctermfg=6       ctermbg=none    cterm=bold
-"hi rubyClass                       ctermfg=5       ctermbg=none    cterm=bold
-"hi rubyPseudoVariable              ctermfg=none    ctermbg=none    cterm=none
-"hi rubyKeyword                     ctermfg=none    ctermbg=none    cterm=none
-"hi rubyInstanceVariable            ctermfg=none    ctermbg=none    cterm=none
-"hi rubyFunction                    ctermfg=none    ctermbg=none    cterm=none
-"hi rubyDefine                      ctermfg=none    ctermbg=none    cterm=none
-"hi rubySymbol                      ctermfg=none    ctermbg=none    cterm=none
-"hi rubyConstant                    ctermfg=none    ctermbg=none    cterm=none
-"hi rubyAccess                      ctermfg=none    ctermbg=none    cterm=none
-"hi rubyAttribute                   ctermfg=none    ctermbg=none    cterm=none
-"hi rubyInclude                     ctermfg=none    ctermbg=none    cterm=none
-"hi rubyLocalVariableOrMethod       ctermfg=none    ctermbg=none    cterm=none
-"hi rubyCurlyBlock                  ctermfg=none    ctermbg=none    cterm=none
-"hi rubyCurlyBlockDelimiter         ctermfg=none    ctermbg=none    cterm=none
-"hi rubyArrayDelimiter              ctermfg=none    ctermbg=none    cterm=none
+"hi rubyModule
+"hi rubyClass
+"hi rubyPseudoVariable
 
-"hi rubyStringDelimiter             ctermfg=none    ctermbg=none    cterm=none
+"hi rubyKeyword
+"hi rubyInstanceVariable
+"hi rubyAccess
+"hi rubyAttribute
+"hi rubyInclude
+"hi rubyCurlyBlockDelimiter
+"hi rubyArrayDelimiter
+
 call s:Color("rubyStringDelimiter", "NONE", "NONE", s:blue, s:bright_white)
 call s:Color("rubyString", "NONE", "NONE", s:blue, s:bright_white)
 call s:Color("rubySymbol", "NONE","NONE", s:bright_magenta, s:bright_white)
 call s:Color("rubyInteger", "NONE", "NONE", s:bright_red, s:bright_white)
 call s:Color("rubyInterpolationDelimiter", "NONE", "NONE", s:green, s:bright_white)
 call s:Color("rubyComment", "NONE", "NONE", s:bright_black, s:bright_white)
+
 "call s:Color("rubyCurlyBlock", "NONE","NONE", s:red, s:bright_white)
 "call s:Color("rubyMethodBlock", "NONE", "NONE", s:red, s:bright_white)
 "call s:Color("rubyDoBlock", "NONE", "NONE", s:red, s:bright_white)
 "call s:Color("rubyLocalVariableOrMethod", "NONE", "NONE", s:red, s:bright_white)
 
-"hi rubyInterpolationDelimiter      ctermfg=none    ctermbg=none    cterm=none
-"hi rubyConditional                 ctermfg=none    ctermbg=none    cterm=none
-"hi rubyRepeat                      ctermfg=none    ctermbg=none    cterm=none
-"hi rubyControl                     ctermfg=none    ctermbg=none    cterm=none
-"hi rubyException                   ctermfg=none    ctermbg=none    cterm=none
-"hi rubyExceptional                 ctermfg=none    ctermbg=none    cterm=none
-"hi rubyBoolean                     ctermfg=none    ctermbg=none    cterm=none
+"hi rubyRepeat
+"hi rubyExceptional
+"hi rubyBoolean
 "
 "" Python
-"hi pythonImport                    ctermfg=none    ctermbg=none    cterm=none 
-"hi pythonExceptions                ctermfg=none    ctermbg=none    cterm=none
-"hi pythonException                 ctermfg=none    ctermbg=none    cterm=none
-"hi pythonInclude                   ctermfg=none    ctermbg=none    cterm=none
-"hi pythonStatement                 ctermfg=none    ctermbg=none    cterm=none
-"hi pythonConditional               ctermfg=none    ctermbg=none    cterm=none
-"hi pythonRepeat                    ctermfg=none    ctermbg=none    cterm=none
-"hi pythonFunction                  ctermfg=none    ctermbg=none    cterm=none
-"hi pythonPreCondit                 ctermfg=none    ctermbg=none    cterm=none
-"hi pythonExClass                   ctermfg=none    ctermbg=none    cterm=none
-"hi pythonOperator                  ctermfg=none    ctermbg=none    cterm=none
-"hi pythonBuiltin                   ctermfg=none    ctermbg=none    cterm=none
-"hi pythonDecorator                 ctermfg=none    ctermbg=none    cterm=none
-"hi pythonString                    ctermfg=none    ctermbg=none    cterm=none
-"hi pythonEscape                    ctermfg=none    ctermbg=none    cterm=none
-"hi pythonStrFormatting             ctermfg=none    ctermbg=none    cterm=none
-"hi pythonBoolean                   ctermfg=none    ctermbg=none    cterm=none
-"hi pythonExClass                   ctermfg=none    ctermbg=none    cterm=none
-"hi pythonBytesEscape               ctermfg=none    ctermbg=none    cterm=none
-"hi pythonDottedName                ctermfg=none    ctermbg=none    cterm=none
-"hi pythonStrFormat                 ctermfg=none    ctermbg=none    cterm=none
-"
+"hi pythonImport
+"hi pythonExceptions
+"hi pythonException
+"hi pythonInclude
+"hi pythonStatement
+"hi pythonConditional
+"hi pythonRepeat
+"hi pythonFunction
+"hi pythonPreCondit
+"hi pythonExClass
+"hi pythonOperator
+"hi pythonBuiltin
+"hi pythonDecorator
+"hi pythonString
+"hi pythonEscape
+"hi pythonStrFormatting
+"hi pythonBoolean
+"hi pythonExClass
+"hi pythonBytesEscape
+"hi pythonDottedName
+"hi pythonStrFormat
+
 "" Javascript
-"hi javaScriptBraces                ctermfg=none    ctermbg=none    cterm=none
-"hi javaScriptParens                ctermfg=none    ctermbg=none    cterm=none
-"hi javaScriptIdentifier            ctermfg=none    ctermbg=none    cterm=none
-"hi javaScriptFunction              ctermfg=none    ctermbg=none    cterm=none
-"hi javaScriptConditional           ctermfg=none    ctermbg=none    cterm=none
-"hi javaScriptRepeat                ctermfg=none    ctermbg=none    cterm=none
-"hi javaScriptBoolean               ctermfg=none    ctermbg=none    cterm=none
-"hi javaScriptNumber                ctermfg=none    ctermbg=none    cterm=none
-"hi javaScriptMember                ctermfg=none    ctermbg=none    cterm=none
-"hi javaScriptReserved              ctermfg=none    ctermbg=none    cterm=none
-"hi javascriptNull                  ctermfg=none    ctermbg=none    cterm=none
-"hi javascriptGlobal                ctermfg=none    ctermbg=none    cterm=none
-"hi javascriptStatement             ctermfg=none    ctermbg=none    cterm=none
-"hi javaScriptMessage               ctermfg=none    ctermbg=none    cterm=none
-"hi javaScriptMember                ctermfg=none    ctermbg=none    cterm=none
+"hi javaScriptBraces
+"hi javaScriptParens
+"hi javaScriptIdentifier
+"hi javaScriptFunction
+"hi javaScriptConditional
+"hi javaScriptRepeat
+"hi javaScriptBoolean
+"hi javaScriptNumber
+"hi javaScriptMember
+"hi javaScriptReserved
+"hi javascriptNull
+"hi javascriptGlobal
+"hi javascriptStatement
+"hi javaScriptMessage
+"hi javaScriptMember
 "
 "" JSON
-"hi jsonKeyword                     ctermfg=none    ctermbg=none    cterm=none
-"hi jsonString                      ctermfg=none    ctermbg=none    cterm=none
-"hi jsonQuote                       ctermfg=none    ctermbg=none    cterm=none
-"hi jsonNoise                       ctermfg=none    ctermbg=none    cterm=none
-"hi jsonKeywordMatch                ctermfg=none    ctermbg=none    cterm=none
-"hi jsonBraces                      ctermfg=none    ctermbg=none    cterm=none
-"hi jsonNumber                      ctermfg=none    ctermbg=none    cterm=none
-"hi jsonNull                        ctermfg=none    ctermbg=none    cterm=none
-"hi jsonBoolean                     ctermfg=none    ctermbg=none    cterm=none
-"hi jsonCommentError                ctermfg=none    ctermbg=none    cterm=none
+"hi jsonKeyword
+"hi jsonString
+"hi jsonQuote
+"hi jsonNoise
+"hi jsonKeywordMatch
+"hi jsonBraces
+"hi jsonNumber
+"hi jsonNull
+"hi jsonBoolean
+"hi jsonCommentError
 "
 "" SQL
-"hi sqlStatement                    ctermfg=none    ctermbg=none    cterm=none
-"hi sqlType                         ctermfg=none    ctermbg=none    cterm=none
-"hi sqlKeyword                      ctermfg=none    ctermbg=none    cterm=none
-"hi sqlOperator                     ctermfg=none    ctermbg=none    cterm=none
-"hi sqlSpecial                      ctermfg=none    ctermbg=none    cterm=none
-"hi mysqlVariable                   ctermfg=none    ctermbg=none    cterm=none
-"hi mysqlType                       ctermfg=none    ctermbg=none    cterm=none
-"hi mysqlKeyword                    ctermfg=none    ctermbg=none    cterm=none
-"hi mysqlOperator                   ctermfg=none    ctermbg=none    cterm=none
-"hi mysqlSpecial                    ctermfg=none    ctermbg=none    cterm=none
+"hi sqlStatement
+"hi sqlType
+"hi sqlKeyword
+"hi sqlOperator
+"hi sqlSpecial
+"hi mysqlVariable
+"hi mysqlType
+"hi mysqlKeyword
+"hi mysqlOperator
+"hi mysqlSpecial
 "
 "" YAML
-"hi yamlBlockMappingKey             ctermfg=none    ctermbg=none    cterm=none
-"hi yamlKeyValueDelimiter           ctermfg=none    ctermbg=none    cterm=none
-"hi yamlBlockCollectionItemStart    ctermfg=none    ctermbg=none    cterm=none
+"hi yamlBlockMappingKey
+"hi yamlKeyValueDelimiter
+"hi yamlBlockCollectionItemStart
 "
 "" XML
-"hi xmlProcessingDelim              ctermfg=none    ctermbg=none    cterm=none
-"hi xmlString                       ctermfg=none    ctermbg=none    cterm=none
-"hi xmlEqual                        ctermfg=none    ctermbg=none    cterm=none
-"hi xmlAttrib                       ctermfg=none    ctermbg=none    cterm=none
-"hi xmlAttribPunct                  ctermfg=none    ctermbg=none    cterm=none
-"hi xmlTag                          ctermfg=none    ctermbg=none    cterm=none
-"hi xmlTagName                      ctermfg=none    ctermbg=none    cterm=none
-"hi xmlEndTag                       ctermfg=none    ctermbg=none    cterm=none
-"hi xmlNamespace                    ctermfg=none    ctermbg=none    cterm=none
+"hi xmlProcessingDelim
+"hi xmlString
+"hi xmlEqual
+"hi xmlAttrib
+"hi xmlAttribPunct
+"hi xmlTag
+"hi xmlTagName
+"hi xmlEndTag
+"hi xmlNamespace
 "
 "" HTML
-"hi htmlTitle                       ctermfg=none    ctermbg=none    cterm=none
-"hi htmlH1                          ctermfg=none    ctermbg=none    cterm=none
-"hi htmlH2                          ctermfg=none    ctermbg=none    cterm=none
-"hi htmlH3                          ctermfg=none    ctermbg=none    cterm=none
-"hi htmlH4                          ctermfg=none    ctermbg=none    cterm=none
-"hi htmlTag                         ctermfg=none    ctermbg=none    cterm=none
-"hi htmlTagName                     ctermfg=none    ctermbg=none    cterm=none
-"hi htmlArg                         ctermfg=none    ctermbg=none    cterm=none
-"hi htmlEndTag                      ctermfg=none    ctermbg=none    cterm=none
-"hi htmlString                      ctermfg=none    ctermbg=none    cterm=none
-"hi htmlScriptTag                   ctermfg=none    ctermbg=none    cterm=none
-"hi htmlBold                        ctermfg=none    ctermbg=none    cterm=none
-"hi htmlItalic                      ctermfg=none    ctermbg=none    cterm=none
-"hi htmlBoldItalic                  ctermfg=none    ctermbg=none    cterm=none
-"hi htmlTagN                        ctermfg=none    ctermbg=none    cterm=none
-"hi htmlSpecialTagName              ctermfg=none    ctermbg=none    cterm=none
-"hi htmlComment                     ctermfg=none    ctermbg=none    cterm=none
-"hi htmlCommentPart                 ctermfg=none    ctermbg=none    cterm=none
+"hi htmlTitle
+"hi htmlH1
+"hi htmlH2
+"hi htmlH3
+"hi htmlH4
+"hi htmlTag
+"hi htmlTagName
+"hi htmlArg
+"hi htmlEndTag
+"hi htmlString
+"hi htmlScriptTag
+"hi htmlBold
+"hi htmlItalic
+"hi htmlBoldItalic
+"hi htmlTagN
+"hi htmlSpecialTagName
+"hi htmlComment
+"hi htmlCommentPart
 "
 "" CSS
-"hi cssIdentifier                   ctermfg=none    ctermbg=none    cterm=none
-"hi cssPositioningProp              ctermfg=none    ctermbg=none    cterm=none
-"hi cssNoise                        ctermfg=none    ctermbg=none    cterm=none
-"hi cssBoxProp                      ctermfg=none    ctermbg=none    cterm=none
-"hi cssTableAttr                    ctermfg=none    ctermbg=none    cterm=none
-"hi cssPositioningAttr              ctermfg=none    ctermbg=none    cterm=none
-"hi cssValueLength                  ctermfg=none    ctermbg=none    cterm=none
-"hi cssFunctionName                 ctermfg=none    ctermbg=none    cterm=none
-"hi cssUnitDecorators               ctermfg=none    ctermbg=none    cterm=none
-"hi cssColor                        ctermfg=none    ctermbg=none    cterm=none
-"hi cssBraces                       ctermfg=none    ctermbg=none    cterm=none
-"hi cssBackgroundProp               ctermfg=none    ctermbg=none    cterm=none
-"hi cssTextProp                     ctermfg=none    ctermbg=none    cterm=none
-"hi cssDimensionProp                ctermfg=none    ctermbg=none    cterm=none
-"hi cssClassName                    ctermfg=none    ctermbg=none    cterm=none
+"hi cssIdentifier
+"hi cssPositioningProp
+"hi cssNoise
+"hi cssBoxProp
+"hi cssTableAttr
+"hi cssPositioningAttr
+"hi cssValueLength
+"hi cssFunctionName
+"hi cssUnitDecorators
+"hi cssColor
+"hi cssBraces
+"hi cssBackgroundProp
+"hi cssTextProp
+"hi cssDimensionProp
+"hi cssClassName
 "
 "" Markdown
-"hi markdownHeadingRule             ctermfg=none    ctermbg=none    cterm=none
-"hi markdownH1                      ctermfg=none    ctermbg=none    cterm=none
-"hi markdownH2                      ctermfg=none    ctermbg=none    cterm=none
-"hi markdownBlockquote              ctermfg=none    ctermbg=none    cterm=none
-"hi markdownCodeBlock               ctermfg=none    ctermbg=none    cterm=none
-"hi markdownCode                    ctermfg=none    ctermbg=none    cterm=none
-"hi markdownLink                    ctermfg=none    ctermbg=none    cterm=none
-"hi markdownUrl                     ctermfg=none    ctermbg=none    cterm=none
-"hi markdownLinkText                ctermfg=none    ctermbg=none    cterm=none
-"hi markdownLinkTextDelimiter       ctermfg=none    ctermbg=none    cterm=none
-"hi markdownLinkDelimiter           ctermfg=none    ctermbg=none    cterm=none
-"hi markdownCodeDelimiter           ctermfg=none    ctermbg=none    cterm=none
-"hi mkdCode                         ctermfg=none    ctermbg=none    cterm=none
-"hi mkdLink                         ctermfg=none    ctermbg=none    cterm=none
-"hi mkdURL                          ctermfg=none    ctermbg=none    cterm=none
-"hi mkdString                       ctermfg=none    ctermbg=none    cterm=none
-"hi mkdBlockQuote                   ctermfg=none    ctermbg=none    cterm=none
-"hi mkdLinkTitle                    ctermfg=none    ctermbg=none    cterm=none
-"hi mkdDelimiter                    ctermfg=none    ctermbg=none    cterm=none
-"hi mkdRule                         ctermfg=none    ctermbg=none    cterm=none
+"hi markdownHeadingRule
+"hi markdownH1
+"hi markdownH2
+"hi markdownBlockquote
+"hi markdownCodeBlock
+"hi markdownCode
+"hi markdownLink
+"hi markdownUrl
+"hi markdownLinkText
+"hi markdownLinkTextDelimiter
+"hi markdownLinkDelimiter
+"hi markdownCodeDelimiter
+"hi mkdCode
+"hi mkdLink
+"hi mkdURL
+"hi mkdString
+"hi mkdBlockQuote
+"hi mkdLinkTitle
+"hi mkdDelimiter
+"hi mkdRule
 "
 "" Shell
-"hi bashStatement                   ctermfg=none    ctermbg=none    cterm=none
-"hi shDerefVar                      ctermfg=none    ctermbg=none    cterm=none
-"hi shDerefSimple                   ctermfg=none    ctermbg=none    cterm=none
-"hi shFunction                      ctermfg=none    ctermbg=none    cterm=none
-"hi shStatement                     ctermfg=none    ctermbg=none    cterm=none
-"hi shLoop                          ctermfg=none    ctermbg=none    cterm=none
-"hi shQuote                         ctermfg=none    ctermbg=none    cterm=none
-"hi shCaseEsac                      ctermfg=none    ctermbg=none    cterm=none
-"hi shSnglCase                      ctermfg=none    ctermbg=none    cterm=none
-"hi shFunctionOne                   ctermfg=none    ctermbg=none    cterm=none
-"hi shCase                          ctermfg=none    ctermbg=none    cterm=none
-"hi shSetList                       ctermfg=none    ctermbg=none    cterm=none
+"hi bashStatement
+"hi shDerefVar
+"hi shDerefSimple
+"hi shFunction
+"hi shStatement
+"hi shLoop
+"hi shQuote
+"hi shCaseEsac
+"hi shSnglCase
+"hi shFunctionOne
+"hi shCase
+"hi shSetList
 
 " netrw
-"hi netrwVersion                    ctermfg=none    ctermbg=none    cterm=none
-"hi netrwList                       ctermfg=none    ctermbg=none    cterm=none
-"hi netrwHidePat                    ctermfg=none    ctermbg=none    cterm=none
-"hi netrwQuickHelp                  ctermfg=none    ctermbg=none    cterm=none
-"hi netrwHelpCmd                    ctermfg=none    ctermbg=none    cterm=none
-"hi netrwDir                        ctermfg=none    ctermbg=none    cterm=none
-"hi netrwClassify                   ctermfg=none    ctermbg=none    cterm=none
-"hi netrwExe                        ctermfg=none    ctermbg=none    cterm=none
-"hi netrwSuffixes                   ctermfg=none    ctermbg=none    cterm=none
-"hi netrwTreeBar                    ctermfg=none    ctermbg=none    cterm=none
+"hi netrwVersion
+"hi netrwList
+"hi netrwHidePat
+"hi netrwQuickHelp
+"hi netrwHelpCmd
+"hi netrwDir
+"hi netrwClassify
+"hi netrwExe
+"hi netrwSuffixes
+"hi netrwTreeBar
 call s:Color("netrwTreeBar", s:g_black, "NONE", s:black, "NONE")
