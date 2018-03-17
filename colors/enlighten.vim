@@ -47,10 +47,15 @@ let s:bright_magenta = "13"
 let s:bright_cyan = "14"
 let s:bright_white = "15"
 
+"
+"
 " s:Color(options={})
 "
 " s:Color('HighlightGroup', s:gui_foreground, s:gui_background, s:term_foreground, s:term_background, 'display_mode')
 " ex. call s:Color("Normal",   s:g_black,  s:g_white,  s:black,  s:white)
+"
+"
+
 function! s:Color(group, g_fg, g_bg, fg, bg, ...)
   if empty(a:0)
     let style = "NONE"
@@ -63,6 +68,16 @@ function! s:Color(group, g_fg, g_bg, fg, bg, ...)
     \ . " ctermbg=" . a:bg
     \ . " gui="     . style
     \ . " cterm="   . style
+endfunction
+
+" Allow highlighting of Operators
+autocmd FileType * call <SID>def_base_syntax()
+function! s:def_base_syntax()
+  " Simple example
+  syntax match commonOperator "\(+\|=\|-\|\^\|\*\)"
+  syntax match baseDelimiter ","
+  hi link commonOperator Operator
+  hi link baseDelimiter Delimiter
 endfunction
 
 " Editor settings
@@ -109,19 +124,20 @@ call s:Color("ModeMsg", s:g_black, s:g_bright_white, s:black, s:bright_white, "b
 call s:Color("MatchParen", "NONE", s:g_bright_red, s:bright_white, s:bright_blue, "bold")
 call s:Color("Visual", "NONE", s:g_white, "NONE", s:white)
 call s:Color("VisualNOS", s:g_black, s:g_white, s:black, s:white)
-call s:Color("NonText", s:g_bright_blue, "NONE", s:bright_blue, "NONE")
 
-call s:Color("Todo", s:g_bright_white, s:g_yellow, s:bright_white, s:yellow)
+" hightlights eol, extends, precedes
+call s:Color("NonText", s:g_white, "NONE", s:white, "NONE")
+" hilights trail, tab, nbsp
+call s:Color("SpecialKey", s:g_white, s:g_bright_white, s:white, s:bright_white)
+
+call s:Color("Todo", s:g_bright_white, s:g_white, s:bright_white, s:white, "bold")
 call s:Color("Error", s:g_bright_white, s:g_bright_red, s:bright_white, s:bright_red)
 call s:Color("ErrorMsg", s:g_bright_white, s:g_bright_red, s:bright_white, s:bright_red)
 call s:Color("WarningMsg", s:g_bright_white, s:g_yellow, s:bright_white, s:yellow)
-call s:Color("SpecialKey", s:g_black, s:g_bright_white, s:black, s:bright_white, "underline")
-"hi Underlined                      ctermfg=none    ctermbg=0       cterm=none
-"hi Ignore                          ctermfg=15      ctermbg=8       cterm=none
 
 " Completion Menu
 call s:Color("Pmenu", s:g_black, s:g_bright_white, s:black, s:bright_white)
-call s:Color("PmenuSel", s:g_bright_white, s:g_bright_blue, s:bright_white, s:bright_blue) 
+call s:Color("PmenuSel", s:g_bright_white, s:g_bright_blue, s:bright_white, s:bright_blue)
 call s:Color("PmenuSbar", s:g_bright_white, s:g_bright_white, s:bright_white, s:bright_white)
 call s:Color("PmenuThumb", s:g_white, s:g_white, s:white, s:white)
 
@@ -138,85 +154,94 @@ call s:Color("DiffDelete", s:g_bright_red, s:g_bright_magenta, s:bright_red, s:b
 "hi SpellRare
 
 "" Language Constructs
-"hi Statement
-"hi Conditional
-"hi Repeat
-"hi Label
-"hi Operator
-"hi Keyword
-"hi Exception
-"hi Comment
+call s:Color("Comment", "NONE", "NONE", s:bright_black, s:bright_white)
 
-"hi Special
-"hi SpecialChar
-"hi Tag
-"hi Delimiter
-"hi SpecialComment
-"hi Debug
+call s:Color("Constant", "NONE", "NONE", s:blue, s:bright_white)
+call s:Color("String", "NONE", "NONE", s:cyan, s:bright_white)
+call s:Color("Character", "NONE", "NONE", s:cyan, s:bright_white)
+call s:Color("Number", "NONE", "NONE", s:cyan, s:bright_white)
+call s:Color("Boolean", "NONE", "NONE", s:blue, s:bright_white)
+call s:Color("Float", "NONE", "NONE", s:cyan, s:bright_white)
 
-"" Variable Types
-"hi Constant
-"hi String
-"hi StringDelimiter
-"hi Character
-"hi Number
-"hi Boolean
-"hi Float
+call s:Color("Identifier", "NONE", "NONE", s:cyan, s:bright_white)
+call s:Color("Function", "NONE", "NONE", s:magenta, s:bright_white)
 
-"hi Identifier
-"hi Function
+call s:Color("Statement", "NONE", "NONE", s:bright_red, s:bright_white)
+call s:Color("Conditional", "NONE", "NONE", s:bright_red, s:bright_white)
+call s:Color("Repeat", "NONE", "NONE", s:bright_red, s:bright_white)
+call s:Color("Label", "NONE", "NONE", s:bright_red, s:bright_white)
+call s:Color("Operator", "NONE", "NONE", s:bright_red, s:bright_white)
+call s:Color("Keyword", "NONE", "NONE", s:bright_red, s:bright_white)
+call s:Color("Exception", "NONE", "NONE", s:bright_red, s:bright_white)
 
-" IndentLine
-call s:Color("Conceal", s:g_black, s:g_bright_white, s:black, s:bright_white)
+call s:Color("PreProc", "NONE", "NONE", s:bright_red, s:bright_white)
+call s:Color("Include", "NONE", "NONE", s:bright_red, s:bright_white)
+call s:Color("Define", "NONE", "NONE", s:bright_red, s:bright_white)
+call s:Color("Macro", "NONE", "NONE", s:bright_red, s:bright_white)
+call s:Color("PreCondit", "NONE", "NONE", s:bright_red, s:bright_white)
 
-" GitGutter
-call s:Color("GitGutterAdd", s:g_bright_green, s:g_bright_white, s:bright_green, s:bright_white)
-call s:Color("GitGutterChange", s:g_yellow, s:g_bright_white, s:yellow, s:bright_white)
-call s:Color("GitGutterDelete", s:g_bright_red, s:g_bright_white, s:bright_red, s:bright_white)
-call s:Color("GitGutterChangeDelete", s:g_magenta, s:g_bright_white, s:magenta, s:bright_white)
+call s:Color("Type", "NONE", "NONE", s:blue, s:bright_white)
+call s:Color("StorageClass", "NONE", "NONE", s:blue, s:bright_white)
+call s:Color("Structure", "NONE", "NONE", s:blue, s:bright_white)
+call s:Color("Typedef", "NONE", "NONE", s:blue, s:bright_white)
 
-"" C Family
-"hi PreProc
-"hi Include
-"hi Define
-"hi Macro
-"hi PreCondit
+call s:Color("Special", "NONE", "NONE", s:bright_red, s:bright_white)
+call s:Color("SpecialChar", "NONE", "NONE", s:bright_red, s:bright_white)
+call s:Color("Tag", "NONE", "NONE", s:bright_red, s:bright_white)
+call s:Color("Delimiter", "NONE", "NONE", s:black, s:bright_white)
+call s:Color("SpecialComment", "NONE", "NONE", s:bright_red, s:bright_white)
+call s:Color("Debug", "NONE", "NONE", s:bright_red, s:bright_white)
 
-"hi Type
-"hi StorageClass
-"hi Structure
-"hi Typedef
-"
+call s:Color("Underlined", "NONE", "NONE", s:blue, s:bright_white, "underline")
+call s:Color("Ignore", "NONE", "NONE", "NONE", "NONE")
+
+" vim script
+hi link vimUserFunc Function
+hi link vimFunction Function
+hi link vimOperParen Normal
+hi link vimVar Normal
+
 "" Ruby
-"hi rubyModule
-"hi rubyClass
+hi link rubyInclude Include
+hi link rubyModule Include
+hi link rubyClass Include
+hi link rubyAttribute Include
+call s:Color("rubyPseudoVariable", "NONE", "NONE", s:blue, s:bright_white)
+hi link rubyDefine Define
+hi link rubyFunction Function
+hi link rubyConstant Constant
+call s:Color("rubySymbol", "NONE","NONE", s:blue, s:bright_white)
+hi link rubyConditional Conditional
+hi link rubyException Exception
+hi link rubyControl Repeat
+"hi rubyDoBlock
+call s:Color("rubyBlockParameter", "NONE", "NONE", s:black, s:bright_white)
+
+hi link rubyString String
+hi link rubyStringDelimiter String
+hi link rubyInterpolationDelimiter String
+
+hi link rubyInteger Number
+hi link rubyFloat Float
+hi link rubyComment Comment
+hi link rubyAssertion Statement
 "hi rubyPseudoVariable
 
 "hi rubyKeyword
 "hi rubyInstanceVariable
 "hi rubyAccess
-"hi rubyAttribute
-"hi rubyInclude
 "hi rubyCurlyBlockDelimiter
 "hi rubyArrayDelimiter
 
-call s:Color("rubyStringDelimiter", "NONE", "NONE", s:blue, s:bright_white)
-call s:Color("rubyString", "NONE", "NONE", s:blue, s:bright_white)
-call s:Color("rubySymbol", "NONE","NONE", s:bright_magenta, s:bright_white)
-call s:Color("rubyInteger", "NONE", "NONE", s:bright_red, s:bright_white)
-call s:Color("rubyInterpolationDelimiter", "NONE", "NONE", s:green, s:bright_white)
-call s:Color("rubyComment", "NONE", "NONE", s:bright_black, s:bright_white)
-
-"call s:Color("rubyCurlyBlock", "NONE","NONE", s:red, s:bright_white)
-"call s:Color("rubyMethodBlock", "NONE", "NONE", s:red, s:bright_white)
-"call s:Color("rubyDoBlock", "NONE", "NONE", s:red, s:bright_white)
-"call s:Color("rubyLocalVariableOrMethod", "NONE", "NONE", s:red, s:bright_white)
+"hi rubyCurlyBlock
+"hi rubyMethodBlock
+"hi rubyLocalVariableOrMethod
 
 "hi rubyRepeat
 "hi rubyExceptional
-"hi rubyBoolean
-"
-"" Python
+hi link rubyBoolean Boolean
+
+" Python
 "hi pythonImport
 "hi pythonExceptions
 "hi pythonException
@@ -368,6 +393,15 @@ call s:Color("rubyComment", "NONE", "NONE", s:bright_black, s:bright_white)
 "hi shFunctionOne
 "hi shCase
 "hi shSetList
+
+" IndentLine
+call s:Color("Conceal", s:g_white, s:g_bright_white, s:white, s:bright_white)
+
+" GitGutter
+call s:Color("GitGutterAdd", s:g_bright_green, s:g_bright_white, s:bright_green, s:bright_white)
+call s:Color("GitGutterChange", s:g_yellow, s:g_bright_white, s:yellow, s:bright_white)
+call s:Color("GitGutterDelete", s:g_bright_red, s:g_bright_white, s:bright_red, s:bright_white)
+call s:Color("GitGutterChangeDelete", s:g_magenta, s:g_bright_white, s:magenta, s:bright_white)
 
 " netrw
 "hi netrwVersion
