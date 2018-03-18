@@ -170,6 +170,9 @@ call s:Color("BlueOnWhite", s:g_blue, s:g_white, s:blue, s:white,"bold")
 
 call s:Color("UnderlineBlack", s:g_black, "NONE", s:black, "NONE", "underline")
 call s:Color("UnderlineBrightBlack", s:g_bright_black, "NONE", s:bright_black, "NONE", "underline")
+call s:Color("UnderlineRed", s:g_red, "NONE", s:red, "NONE", "underline")
+call s:Color("UnderlineGreen", s:g_green, "NONE", s:green, "NONE", "underline")
+call s:Color("UnderlineYellow", s:g_yellow, "NONE", s:yellow, "NONE", "underline")
 "===============================================================================
 " Highlight groups
 
@@ -203,20 +206,17 @@ hi clear PmenuSel | hi link PmenuSel BrightWhiteOnBrightBlue
 hi clear PmenuSbar | hi link PmenuSbar BrightWhiteOnBrightWhite
 hi clear PmenuThumb | hi link PmenuThumb WhiteOnWhite
 hi clear Question | hi link Question Green
-" hi QuickFixLine
+hi clear QuickFixLine | hi link QuickFixLine Magenta
 hi clear Search | hi link Search BrightWhiteOnBrightBlue
 hi clear SpecialKey | hi link SpecialKey White
-
-"hi SpellBad
-"hi SpellCap
-"hi SpellLocal
-"hi SpellRare
-
+hi clear SpellBad | hi link SpellBad UnderlineRed
+hi clear SpellCap | hi link SpellCap UnderlineGreen
+hi clear SpellLocal | hi link SpellLocal UnderlineYellow
+hi clear SpellRare | hi link SpellRare UnderlineYellow
 hi clear StatusLine | hi link StatusLine BoldBlue
 hi clear StatusLineNC | hi link StatusLineNC White
-
-"hi StatusLineTerm
-"hi StatusLineTermNC
+hi clear StatusLineTerm | hi link StatusLineTerm Blue
+hi clear StatusLineTermNC | hi link StatusLineTermNC White
 hi clear TabLine | hi link TabLine bgWhite
 hi clear TabLineFill | hi link TabLineFill bgWhite
 hi clear TabLineSel | hi link TabLineSel Black
