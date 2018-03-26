@@ -1,6 +1,6 @@
 " Enlighten - A Color Scheme
 " Maintainer: Melanie Berkley <http://berkley.io>
-" Last Change: 2018 Mar 18
+" Last Change: 2018 Mar 26
 " License: BSD-2-Clause
 
 "
@@ -15,12 +15,11 @@
 "
 
 " Initialize Enlighten
-set background=light
 hi clear
 if exists("syntax_on")
     syntax reset
 endif
-let g:colors_name="enlighten"
+let colors_name = "enlighten"
 
 " GUI colors
 let s:g_black = "#000000"
@@ -77,8 +76,8 @@ autocmd FileType * call <SID>def_base_syntax()
 function! s:def_base_syntax()
   syntax match commonOperator "\(+\|=\|-\|\^\|\*\)"
   syntax match baseDelimiter ","
-  hi link commonOperator Operator
-  hi link baseDelimiter Delimiter
+  hi link commonOperator Blue
+  hi link baseDelimiter Black
 endfunction
 
 "===============================================================================
@@ -163,6 +162,7 @@ call s:Color("BrightWhiteOnBrightBlue", s:g_bright_white, s:g_bright_blue, s:bri
 call s:Color("BrightWhiteOnBrightWhite", s:g_bright_white, s:g_bright_white, s:bright_white, s:bright_white)
 call s:Color("BrightWhiteOnWhite", s:g_bright_white, s:g_white, s:bright_white, s:white)
 call s:Color("BrightWhiteOnYellow", s:g_bright_white, s:g_yellow, s:bright_white, s:yellow)
+call s:Color("BrightWhiteOnRed", s:g_bright_white, s:g_red, s:bright_white, s:red)
 call s:Color("BlackOnYellow", s:g_black, s:g_yellow, s:black, s:yellow, "bold")
 call s:Color("BlackOnBrightYellow", s:g_black, s:g_bright_yellow, s:black, s:bright_yellow, "bold")
 call s:Color("WhiteOnWhite", s:g_white, s:g_white, s:white, s:white)
@@ -173,6 +173,7 @@ call s:Color("UnderlineBrightBlack", s:g_bright_black, "NONE", s:bright_black, "
 call s:Color("UnderlineRed", s:g_red, "NONE", s:red, "NONE", "underline")
 call s:Color("UnderlineGreen", s:g_green, "NONE", s:green, "NONE", "underline")
 call s:Color("UnderlineYellow", s:g_yellow, "NONE", s:yellow, "NONE", "underline")
+call s:Color("UnderlineBlue", s:g_blue, "NONE", s:blue, "NONE", "underline")
 "===============================================================================
 " Highlight groups
 
@@ -225,25 +226,25 @@ hi clear Visual | hi link Visual bgWhite
 hi clear VisualNOS | hi link VisualNOS bgWhite
 hi clear WarningMsg | hi link WarningMsg BrightWhiteOnYellow
 hi clear WildMenu | hi link WildMenu BrightWhiteOnBrightBlue
-hi clear Todo | hi link Todo BrightWhiteOnWhite
+hi clear Todo | hi link Todo BrightWhiteOnRed
 hi clear Error | hi link Error BrightWhiteOnBrightRed
 
 "===============================================================================
-"" Language Constructs
+" Syntax Group Name
 
-hi clear Comment | hi link Comment BrightBlack
+hi clear Comment | hi link Comment BrightMagenta
 
-hi link Constant Red
+hi clear Constant | hi link Constant Magenta
 "String
 "Character
 "Number
 "Boolean
 "Float
 
-hi link Identifier Cyan
+hi clear Identifier | hi link Identifier Blue
 "Function
 
-hi link Statement Yellow
+hi clear Statement | hi link Statement Blue
 "Conditional
 "Repeat
 "Label
@@ -251,63 +252,65 @@ hi link Statement Yellow
 "Keyword
 "Exception
 
-hi link PreProc Magenta
+hi clear PreProc | hi link PreProc Black
 "Include
 "Define
 "Macro
 "PreCondit
 
-hi link Type Green
+hi clear Type | hi link Type Green
 "StorageClass
 "Structure
 "Typedef
 "Special
 
-hi link Special Magenta
+hi clear Special | hi link Special Magenta
 "SpecialChar
 "Tag
 "Delimiter
 "SpecialComment
 "Debug
 
-call s:Color("Underlined", s:g_blue, "NONE", s:blue, "NONE", "underline")
+hi clear Underlined | hi link Underlined UnderlineBlue
 "hi Ignore
 
 "===============================================================================
-
-" vim script
-hi link vimUserFunc Function
-hi link vimFunction Function
-hi link vimOperParen Normal
-hi link vimVar Normal
+" Languages
 
 "" Ruby
-hi link rubyInclude Include
-hi link rubyModule Include
-hi link rubyClass Include
-hi link rubyAttribute Include
-"call s:Color("rubyPseudoVariable", "NONE", "NONE", s:blue, s:bright_white)
-hi link rubyPseudoVariable Blue
-hi link rubyDefine Define
-hi link rubyFunction Function
-hi link rubyConstant Constant
-"call s:Color("rubySymbol", "NONE","NONE", s:blue, s:bright_white)
-hi link rubySymbol Blue
-hi link rubyConditional Conditional
-hi link rubyException Exception
-hi link rubyControl Repeat
-"hi rubyDoBlock
-"call s:Color("rubyBlockParameter", "NONE", "NONE", s:black, s:bright_white)
-hi link rubyBlockParameter Black
 
+hi link rubyInclude PreProc
+"hi link rubyModule Include
+"hi link rubyClass Include
+"hi link rubyAttribute Include
+
+"rubyPseudoVariable
+
+"hi link rubyPseudoVariable Blue
+"hi link rubyDefine Define
+"hi link rubyFunction Function
+"hi link rubyConstant Constant
+
+"rubySymbol
+
+"hi link rubySymbol Blue
+"hi link rubyConditional Conditional
+"hi link rubyException Exception
+"hi link rubyControl Repeat
+
+"rubyDoBlock
+"rubyBlockParameter
+
+"hi link rubyBlockParameter Black
+"hi link rubyString String
 hi link rubyString String
-hi link rubyStringDelimiter String
-hi link rubyInterpolationDelimiter String
+"hi link rubyStringDelimiter String
+"hi link rubyInterpolationDelimiter String
+"hi link rubyInteger Number
+"hi link rubyFloat Float
+"hi link rubyComment Comment
+"hi link rubyAssertion Statement
 
-hi link rubyInteger Number
-hi link rubyFloat Float
-hi link rubyComment Comment
-hi link rubyAssertion Statement
 "hi rubyPseudoVariable
 
 "hi rubyKeyword
@@ -322,7 +325,8 @@ hi link rubyAssertion Statement
 
 "hi rubyRepeat
 "hi rubyExceptional
-hi link rubyBoolean Boolean
+
+"hi link rubyBoolean Boolean
 
 " Python
 "hi pythonImport
@@ -476,6 +480,12 @@ hi link rubyBoolean Boolean
 "hi shFunctionOne
 "hi shCase
 "hi shSetList
+
+" vim script
+"hi link vimUserFunc Function
+"hi link vimFunction Function
+"hi link vimOperParen Normal
+"hi link vimVar Normal
 
 " GitGutter
 hi link GitGutterAdd BrightGreen
