@@ -31,10 +31,19 @@ This project is in it's early stages and I wouldn't say that it currently lives
 up to the stated goals. Going forward changes and developments should
 seek to uphold the ideals of this project by following it's goals. 
 
-
 ## Accessibility of enlighten
 
-Compared against a background color of `#FFFFFF`
+ | Regular | Bright |
+ | ------- | ------ |
+ | ![#000000](https://placehold.it/15/000000?text=+) `Black`   | ![#666666](https://placehold.it/15/666666?text=+) `Bright Black`
+ | ![#C30600](https://placehold.it/15/C30600?text=+) `Red`     | ![#EC0000](https://placehold.it/15/EC0000?text=+) `Bright Red`
+ | ![#007E00](https://placehold.it/15/007E00?text=+) `Green`   | ![#008500](https://placehold.it/15/008500?text=+) `Bright Green`
+ | ![#CD7F40](https://placehold.it/15/CD7F40?text=+) `Yellow`  | ![#E9AD53](https://placehold.it/15/E9AD53?text=+) `Bright Yellow`
+ | ![#006A9D](https://placehold.it/15/006A9D?text=+) `Blue`    | ![#1761BE](https://placehold.it/15/1761BE?text=+) `Bright Blue`
+ | ![#3C2DA2](https://placehold.it/15/3C2DA2?text=+) `Magenta` | ![#B20F4A](https://placehold.it/15/B20F4A?text=+) `Bright Magenta`
+ | ![#306B6A](https://placehold.it/15/306B6A?text=+) `Cyan`    | ![#276F6F](https://placehold.it/15/276F6F?text=+) `Bright Cyan`
+ | ![#A3AFB6](https://placehold.it/15/A3AFB6?text=+) `White`   | ![#FFFFFF](https://placehold.it/15/FFFFFF?text=+) `Bright White`
+
 
 **Minimum contrast ratio requirements for AA grade**\
 Normal text - 4.5:1\
@@ -54,101 +63,65 @@ Brightness Difference - Minimum 125
 👁 - Pass\
 ⚠️ - Fail
 
-Black `#000000` ✅ 👁
-* Grade - AAA
-* Contrast Ratio - 21:1
-* Colour Difference - 765
-* Brightness Difference - 255
 
-Red `#C30600` ✅ 👁
-* Grade - AA
-* Contrast Ratio - 6.3:1
-* Colour Difference - 564
-* Brightness Difference - 194
+Compared against a background color of `#FFFFFF`
 
-Green `#007E00` ✅ 👁
-* Grade - AA
-* Contrast Ratio - 5.3:1
-* Colour Difference - 639
-* Brightness Difference - 182
+Examle of accessible color meansurement values:
 
-Yellow `#CD7F40` ❌ ⚠️
-* Grade - Fail
-* Contrast Ratio - 3.1:1
-* Colour Difference - 369
-* Brightness Difference - 112
+ | Grade | Contrast Ratio | Color Difference | Brightness Difference
+ | ----- | -------------- | ---------------- | ---------------------
+ | AAA | 21:1 | 765 | 255
 
-Blue '#006A9D' ✅ 👁
-* Grade - AA
-* Contrast Ratio - 5.9:1
-* Colour Difference - 502
-* Brightness Difference - 175
+ As a list:\
+ AAA, 21:1, 765, 255
 
-Magenta `#3C2DA2` ✅ ⚠️
-* Grade - AAA
-* Contrast Ratio - 10.1:1
-* Colour Difference - 498
-* Brightness Difference - 193
+![#000000](https://placehold.it/15/000000?text=+) `Black` `#000000` ✅ 👁\
+AAA, 21:1, 765, 255
 
-Cyan `#306B6A` ✅ 👁
-* Grade - AA
-* Contrast Ratio - 6.1:1
-* Colour Difference - 504
-* Brightness Difference - 166
+![#C30600](https://placehold.it/15/C30600?text=+) `Red` `#C30600` ✅ 👁\
+AA, 6.3:1, 564, 194
 
-White `#A3AFB6` ❌ ⚠️
-* Grade - Fail
-* Contrast Ratio - 2.2:1
-* Colour Difference - 245
-* Brightness Difference - 83
+![#007E00](https://placehold.it/15/007E00?text=+) `Green` `#007E00` ✅ 👁\
+AA, 5.3:1, 639, 182
 
-Bright Black `#666666` ✅ ⚠️
-* Grade - AA
-* Contrast Ratio - 5.7:1
-* Colour Difference - 459
-* Brightness Difference - 153
+![#CD7F40](https://placehold.it/15/CD7F40?text=+) `Yellow` `#CD7F40` ❌ ⚠️\
+Fail, 3.1:1, 369, 112
 
-Bright Red `#EC0000` ✅ 👁
-* Grade - AA
-* Contrast Ratio - 4.6:1
-* Colour Difference - 529
-* Brightness Difference - 185
+![#006A9D](https://placehold.it/15/006A9D?text=+) `Blue` '#006A9D' ✅ 👁\
+AA, 5.9:1, 502, 175
 
-Bright Green `#008500` ✅ 👁
-* Grade - AA
-* Contrast Ratio - 4.8:1
-* Colour Difference - 632
-* Brightness Difference - 177
+![#3C2DA2](https://placehold.it/15/3C2DA2?text=+) `Magenta` `#3C2DA2` ✅ ⚠️\
+AAA, 10.1:1, 498, 193
 
-Bright Yellow `#E9AD53` ❌ ⚠️
-* Grade - Fail
-* Contrast Ratio - 2:1
-* Colour Difference - 276
-* Brightness Difference - 75
+![#306B6A](https://placehold.it/15/306B6A?text=+) `Cyan` `#306B6A` ✅ 👁\
+AA, 6.1:1, 504, 166
 
-Bright Blue `#1761BE` ✅ ⚠️
-* Grade - AA
-* Contrast Ratio - 6:1
-* Colour Difference - 455
-* Brightness Difference - 170
+![#A3AFB6](https://placehold.it/15/A3AFB6?text=+) `White` `#A3AFB6` ❌ ⚠️\
+Fail, 2.2:1, 245, 83
 
-Bright Magenta `#B20F4A` ✅ ⚠️
-* Grade - AA
-* Contrast Ratio - 6.9:1
-* Colour Difference - 498
-* Brightness Difference - 185
+![#666666](https://placehold.it/15/666666?text=+) `Bright Black` `#666666` ✅ ⚠️\
+AA, 5.7:1, 459, 153
 
-Bright Cyan `#276F6F` ✅ 👁
-* Grade - AA
-* Contrast Ratio - 5.9:1
-* Colour Difference - 504
-* Brightness Difference - 166
+![#EC0000](https://placehold.it/15/EC0000?text=+) `Bright Red` `#EC0000` ✅ 👁\
+AA, 4.6:1, 529, 185
 
-Bright White `#FFFFFF` ❌ ⚠️
-* Grade - Fail
-* Contrast Ratio - 1:1
-* Colour Difference - 0
-* Brightness Difference - 0
+![#008500](https://placehold.it/15/008500?text=+) `Bright Green` `#008500` ✅ 👁\
+AA, 4.8:1, 632, 177
+
+![#E9AD53](https://placehold.it/15/E9AD53?text=+) `Bright Yellow` `#E9AD53` ❌ ⚠️\
+Fail, 2:1, 276, 75
+
+![#1761BE](https://placehold.it/15/1761BE?text=+) `Bright Blue` `#1761BE` ✅ ⚠️\
+AA, 6:1, 455, 170
+
+![#B20F4A](https://placehold.it/15/B20F4A?text=+) `Bright Magenta` `#B20F4A` ✅ ⚠️\
+AA, 6.9:1, 498, 185
+
+![#276F6F](https://placehold.it/15/276F6F?text=+) `Bright Cyan` `#276F6F` ✅ 👁\
+AA, 5.9:1, 504, 166
+
+![#FFFFFF](https://placehold.it/15/FFFFFF?text=+) `Bright White` `#FFFFFF` ❌ ⚠️\
+Fail, 1:1, 0, 0
 
 ### Notes on Grading
 AAA grade is given for passing all the above requirements.\
