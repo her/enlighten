@@ -164,12 +164,6 @@ Ruby, Python, Javascript, JSON, SQL, YAML, XML, HTML, CSS, Markdown, Shell, Vim'
 Will add other highlight groups once the above are completed. Possibly next being,
 Perl, php. Also am considering other add-on syntax groups like NGINX or Docker (which would require extending vim with a syntax library for these technologies).  
 
-## Screenshot
-
-**Terminal output**
-![terminal
-output](https://github.com/her/enlighten/blob/master/assets/colortest0.4.0.png)
-
 ## Notes
 
 #### Valuable Vim Docs
