@@ -7,9 +7,7 @@ Currently a work in progress.
 
 **In Progress:**
   * A color scheme with multiple language & highlight group support - enlighten.vim
-
-**TODO:**
-  * Accessibility for colorblind users across all color scheme implementations.
+  * Accessibility for users across all color scheme implementations.
 
 ### enlighten.terminal 👩‍🎨
 Download enlighten.terminal and open it with Terminal.app to auto import.
