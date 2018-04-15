@@ -153,3 +153,9 @@ Perl, php. Also am considering other add-on syntax groups like NGINX or Docker (
 
 #### Colour Contrast Analyser
 * https://github.com/ThePacielloGroup/CCA-OSX
+
+#### Color Oracle
+* https://github.com/nvkelso/color-oracle
+
+#### Color Usage Research Lab
+https://colorusage.arc.nasa.gov/GuidelinesHierarchy.php
