@@ -40,7 +40,7 @@ seek to uphold the ideals of this project by following it's goals.
  | ![#268800](https://placehold.it/15/007E00?text=+) `Green`   | ![#5EB055](https://placehold.it/15/008500?text=+) `Bright Green`
  | ![#C1512C](https://placehold.it/15/CD7F40?text=+) `Yellow`  | ![#DFC240](https://placehold.it/15/E9AD53?text=+) `Bright Yellow`
  | ![#2C69EE](https://placehold.it/15/006A9D?text=+) `Blue`    | ![#4D7DEA](https://placehold.it/15/1761BE?text=+) `Bright Blue`
- | ![#722ECf](https://placehold.it/15/3C2DA2?text=+) `Magenta` | ![#C990F8](https://placehold.it/15/B20F4A?text=+) `Bright Magenta`
+ | ![#722ECF](https://placehold.it/15/3C2DA2?text=+) `Magenta` | ![#C990F8](https://placehold.it/15/B20F4A?text=+) `Bright Magenta`
  | ![#408065](https://placehold.it/15/306B6A?text=+) `Cyan`    | ![#55B0B2](https://placehold.it/15/276F6F?text=+) `Bright Cyan`
  | ![#A3AFB6](https://placehold.it/15/A3AFB6?text=+) `White`   | ![#FEFBED](https://placehold.it/15/FFFFFF?text=+) `Bright White`
 
