@@ -36,13 +36,13 @@ seek to uphold the ideals of this project by following it's goals.
  | Regular | Bright |
  | ------- | ------ |
  | ![#000000](https://placehold.it/15/000000?text=+) `Black`   | ![#666666](https://placehold.it/15/666666?text=+) `Bright Black`
- | ![#B83520](https://placehold.it/15/C30600?text=+) `Red`     | ![#D84D62](https://placehold.it/15/EC0000?text=+) `Bright Red`
- | ![#268800](https://placehold.it/15/007E00?text=+) `Green`   | ![#5EB055](https://placehold.it/15/008500?text=+) `Bright Green`
- | ![#C1512C](https://placehold.it/15/CD7F40?text=+) `Yellow`  | ![#DFC240](https://placehold.it/15/E9AD53?text=+) `Bright Yellow`
- | ![#2C69EE](https://placehold.it/15/006A9D?text=+) `Blue`    | ![#4D7DEA](https://placehold.it/15/1761BE?text=+) `Bright Blue`
- | ![#722ECF](https://placehold.it/15/3C2DA2?text=+) `Magenta` | ![#C990F8](https://placehold.it/15/B20F4A?text=+) `Bright Magenta`
- | ![#408065](https://placehold.it/15/306B6A?text=+) `Cyan`    | ![#55B0B2](https://placehold.it/15/276F6F?text=+) `Bright Cyan`
- | ![#A3AFB6](https://placehold.it/15/A3AFB6?text=+) `White`   | ![#FEFBED](https://placehold.it/15/FFFFFF?text=+) `Bright White`
+ | ![#B83520](https://placehold.it/15/B83520?text=+) `Red`     | ![#D84D62](https://placehold.it/15/D84D62?text=+) `Bright Red`
+ | ![#268800](https://placehold.it/15/268800?text=+) `Green`   | ![#5EB055](https://placehold.it/15/5EB055?text=+) `Bright Green`
+ | ![#C1512C](https://placehold.it/15/C1512C?text=+) `Yellow`  | ![#DFC240](https://placehold.it/15/DFC240?text=+) `Bright Yellow`
+ | ![#2C69EE](https://placehold.it/15/2C69EE?text=+) `Blue`    | ![#4D7DEA](https://placehold.it/15/4D7DEA?text=+) `Bright Blue`
+ | ![#722ECF](https://placehold.it/15/722ECF?text=+) `Magenta` | ![#C990F8](https://placehold.it/15/C990F8?text=+) `Bright Magenta`
+ | ![#408065](https://placehold.it/15/408065?text=+) `Cyan`    | ![#55B0B2](https://placehold.it/15/55B0B2?text=+) `Bright Cyan`
+ | ![#A3AFB6](https://placehold.it/15/A3AFB6?text=+) `White`   | ![#FEFBED](https://placehold.it/15/FEFBED?text=+) `Bright White`
 
 
 **Minimum contrast ratio requirements for AA grade**\
