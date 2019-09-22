@@ -31,7 +31,7 @@ This project is in it's early stages and I wouldn't say that it currently lives
 up to the stated goals. Going forward changes and developments should
 seek to uphold the ideals of this project by following it's goals. 
 
-## Accessibility of enlighten
+## Accessibility
 
  | Regular | Bright |
  | ------- | ------ |
