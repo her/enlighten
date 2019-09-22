@@ -118,22 +118,22 @@ call s:Color("BoldBrightCyan", s:g_bright_cyan, "NONE", s:bright_cyan, "NONE", "
 call s:Color("BoldBrightWhite", s:g_bright_white, "NONE", s:bright_white, "NONE", "bold")
 
 " Background colors
-call s:Color("bgBlack", "NONE", s:g_black, "NONE", s:black)
-call s:Color("bgRed", "NONE", s:g_red, "NONE", s:red)
-call s:Color("bgGreen", "NONE", s:g_green, "NONE", s:green)
-call s:Color("bgYellow", "NONE", s:g_yellow, "NONE", s:yellow)
-call s:Color("bgBlue", "NONE", s:g_blue, "NONE", s:blue)
-call s:Color("bgMagenta", "NONE", s:g_magenta, "NONE", s:magenta)
-call s:Color("bgCyan", "NONE", s:g_cyan, "NONE", s:cyan)
-call s:Color("bgWhite", "NONE", s:g_white, "NONE", s:white)
-call s:Color("bgBrightBlack", "NONE", s:g_bright_black, "NONE", s:bright_black)
-call s:Color("bgBrightRed", "NONE", s:g_bright_red, "NONE", s:bright_red)
-call s:Color("bgBrightGreen", "NONE", s:g_bright_green, "NONE", s:bright_green)
-call s:Color("bgBrightYellow", "NONE", s:g_bright_yellow, "NONE", s:bright_yellow)
-call s:Color("bgBrightBlue", "NONE", s:g_bright_blue, "NONE", s:bright_blue)
-call s:Color("bgBrightMagenta", "NONE", s:g_bright_magenta, "NONE", s:bright_magenta)
-call s:Color("bgBrightCyan", "NONE", s:g_bright_cyan, "NONE", s:bright_cyan)
-call s:Color("bgBrightWhite", "NONE", s:g_bright_white, "NONE", s:bright_white)
+call s:Color("bgBlack", "NONE", s:g_black, "NONE", s:black, "NONE")
+call s:Color("bgRed", "NONE", s:g_red, "NONE", s:red, "NONE")
+call s:Color("bgGreen", "NONE", s:g_green, "NONE", s:green, "NONE")
+call s:Color("bgYellow", "NONE", s:g_yellow, "NONE", s:yellow, "NONE")
+call s:Color("bgBlue", "NONE", s:g_blue, "NONE", s:blue, "NONE")
+call s:Color("bgMagenta", "NONE", s:g_magenta, "NONE", s:magenta, "NONE")
+call s:Color("bgCyan", "NONE", s:g_cyan, "NONE", s:cyan, "NONE")
+call s:Color("bgWhite", "NONE", s:g_white, "NONE", s:white, "NONE")
+call s:Color("bgBrightBlack", "NONE", s:g_bright_black, "NONE", s:bright_black, "NONE")
+call s:Color("bgBrightRed", "NONE", s:g_bright_red, "NONE", s:bright_red, "NONE")
+call s:Color("bgBrightGreen", "NONE", s:g_bright_green, "NONE", s:bright_green, "NONE")
+call s:Color("bgBrightYellow", "NONE", s:g_bright_yellow, "NONE", s:bright_yellow, "NONE")
+call s:Color("bgBrightBlue", "NONE", s:g_bright_blue, "NONE", s:bright_blue, "NONE")
+call s:Color("bgBrightMagenta", "NONE", s:g_bright_magenta, "NONE", s:bright_magenta, "NONE")
+call s:Color("bgBrightCyan", "NONE", s:g_bright_cyan, "NONE", s:bright_cyan, "NONE")
+call s:Color("bgBrightWhite", "NONE", s:g_bright_white, "NONE", s:bright_white, "NONE")
 
 " Bold background colors
 call s:Color("bgBoldBlack", "NONE", s:g_black, "NONE", s:black, "bold")
@@ -163,10 +163,17 @@ call s:Color("BrightWhiteOnBrightWhite", s:g_bright_white, s:g_bright_white, s:b
 call s:Color("BrightWhiteOnWhite", s:g_bright_white, s:g_white, s:bright_white, s:white)
 call s:Color("BrightWhiteOnYellow", s:g_bright_white, s:g_yellow, s:bright_white, s:yellow)
 call s:Color("BrightWhiteOnRed", s:g_bright_white, s:g_red, s:bright_white, s:red)
-call s:Color("BlackOnYellow", s:g_black, s:g_yellow, s:black, s:yellow, "bold")
-call s:Color("BlackOnBrightYellow", s:g_black, s:g_bright_yellow, s:black, s:bright_yellow, "bold")
-call s:Color("WhiteOnWhite", s:g_white, s:g_white, s:white, s:white)
 call s:Color("BlueOnWhite", s:g_blue, s:g_white, s:blue, s:white,"bold")
+
+"function! s:Color(group, g_fg, g_bg, fg, bg, ...)
+call s:Color("WhiteOnRed", s:g_white, s:g_red, s:white, s:red)
+call s:Color("BlackOnYellow", s:g_black, s:g_yellow, s:black, s:yellow, "bold")
+call s:Color("WhiteOnWhite", s:g_white, s:g_white, s:white, s:white)
+call s:Color("BlackOnBrightYellow", s:g_black, s:g_bright_yellow, s:black, s:bright_yellow, "bold")
+call s:Color("BlackOnWhiteUnderline", s:g_black, s:g_white, s:black, s:white, "underline")
+call s:Color("Underline", "NONE", "NONE", "NONE", "NONE", "underline")
+call s:Color("Reverse", "NONE", "NONE", "NONE", "NONE", "reverse")
+call s:Color("Bold", "NONE", "NONE", "NONE", "NONE", "bold")
 
 call s:Color("UnderlineBlack", s:g_black, "NONE", s:black, "NONE", "underline")
 call s:Color("UnderlineBrightBlack", s:g_bright_black, "NONE", s:bright_black, "NONE", "underline")
@@ -177,74 +184,124 @@ call s:Color("UnderlineBlue", s:g_blue, "NONE", s:blue, "NONE", "underline")
 "===============================================================================
 " Highlight groups
 
-hi clear ColorColumn | hi link ColorColumn bgWhite
-hi clear Conceal | hi link Conceal White
-hi clear Cursor | hi link Cursor bgWhite
-hi clear CursorIM | hi link CursorIM bgWhite
-hi clear CursorColumn | hi link CursorColumn bgWhite
-hi clear CursorLine | hi link CursorLine bgWhite
-hi clear Directory | hi link Directory Blue
-hi clear DiffAdd | hi link DiffAdd BrightGreenOnGreen
-hi clear DiffChange | hi link DiffChange BlackOnBrightYellow
-hi clear DiffDelete | hi link DiffDelete BrightRedOnBrightMagenta
-hi clear DiffText | hi link DiffText BlackOnYellow
-hi clear EndOfBuffer | hi link EndOfBuffer White
-hi clear ErrorMsg | hi link ErrorMsg BrightWhiteOnBrightRed
-hi clear VertSplit | hi link VertSplit Black
-hi clear Folded | hi link Folded BrightWhiteOnBrightBlack
-hi clear FoldColumn | hi link FoldColumn BoldBrightBlue
-hi clear SignColumn | hi link SignColumn BrightWhite
-hi clear IncSearch | hi link IncSearch BrightWhiteOnBrightBlue
-hi clear LineNr | hi link LineNr BrightBlack
-hi clear CursorLineNr | hi link CursorLineNR Black
-hi clear MatchParen | hi link MatchParen BrightWhiteOnBrightBlue
-hi clear ModeMsg | hi link ModeMsg Black
-hi clear MoreMsg | hi link MoreMsg Green
-hi clear NonText | hi link NonText White
-hi clear Normal | hi link Normal Black
-hi clear Pmenu | hi link Pmenu Black
-hi clear PmenuSel | hi link PmenuSel BrightWhiteOnBrightBlue
-hi clear PmenuSbar | hi link PmenuSbar BrightWhiteOnBrightWhite
-hi clear PmenuThumb | hi link PmenuThumb WhiteOnWhite
-hi clear Question | hi link Question Green
-hi clear QuickFixLine | hi link QuickFixLine Magenta
-hi clear Search | hi link Search BrightWhiteOnBrightBlue
-hi clear SpecialKey | hi link SpecialKey White
-hi clear SpellBad | hi link SpellBad UnderlineRed
-hi clear SpellCap | hi link SpellCap UnderlineGreen
-hi clear SpellLocal | hi link SpellLocal UnderlineYellow
-hi clear SpellRare | hi link SpellRare UnderlineYellow
-hi clear StatusLine | hi link StatusLine BoldBlue
-hi clear StatusLineNC | hi link StatusLineNC White
-hi clear StatusLineTerm | hi link StatusLineTerm Blue
-hi clear StatusLineTermNC | hi link StatusLineTermNC White
-hi clear TabLine | hi link TabLine bgWhite
-hi clear TabLineFill | hi link TabLineFill bgWhite
-hi clear TabLineSel | hi link TabLineSel Black
-hi clear Title | hi link Title Magenta
-hi clear Visual | hi link Visual bgWhite
-hi clear VisualNOS | hi link VisualNOS bgWhite
-hi clear WarningMsg | hi link WarningMsg BrightWhiteOnYellow
-hi clear WildMenu | hi link WildMenu BrightWhiteOnBrightBlue
-hi clear Todo | hi link Todo BrightWhiteOnRed
-hi clear Error | hi link Error BrightWhiteOnBrightRed
+highlight! IncSearch      Reverse
+highlight! ModeMsg        Bold
+highlight! TermCursor     Reverse
+highlight! TabLineSel     Bold
+highlight! TabLineFill    Reverse
+highlight! CursorLine     Underline
+
+highlight! SpecialKey     Blue
+highlight! NonText        BrightBlue
+highlight! Directory      Blue
+highlight! ErrorMsg       WhiteOnRed
+highlight! MoreMsg        Green
+highlight! CursorLineNr   Yellow
+highlight! Question       Green
+highlight! Title          Magenta
+highlight! WarningMsg     Red
+highlight! WildMenu       BlackOnYellow
+highlight! Conceal        WhiteOnWhite
+highlight! SpellBad       Red
+highlight! SpellRare      Magenta
+highlight! SpellLocal     BrightCyan
+highlight! PmenuSbar      BrightBlack
+highlight! PmenuThumb     Black
+highlight! TabLine        BlackOnWhiteUnderline
+highlight! CursorColumn   bgWhite
+highlight! MatchParen     bgBrightCyan
+highlight! Constant       Red
+highlight! Special        Magenta
+highlight! Identifier     Cyan
+highlight! Statement      Yellow
+highlight! PreProc        Magenta
+highlight! Type           Green
+highlight! Underlined     cterm=underline ctermfg=5
+highlight! Ignore         BrightWhite
+highlight! Error          WhiteOnRed
+highlight! Todo           BlackOnBrightYellow
+
+highlight! LineNr         White
+highlight! Comment        White
+highlight! ColorColumn    ctermfg=8    ctermbg=7
+highlight! Folded         ctermfg=8    ctermbg=7
+highlight! FoldColumn     ctermfg=8    ctermbg=7
+highlight! Pmenu          ctermfg=0    ctermbg=7
+highlight! PmenuSel       ctermfg=7    ctermbg=0
+highlight! SpellCap       ctermfg=8    ctermbg=7
+highlight! StatusLine     ctermfg=0    ctermbg=7    cterm=bold
+highlight! StatusLineNC   ctermfg=8    ctermbg=7    cterm=NONE
+highlight! VertSplit      ctermfg=8    ctermbg=7    cterm=NONE
+highlight! SignColumn                  ctermbg=7
+
+"hi clear ColorColumn | hi link ColorColumn bgWhite
+"hi clear Conceal | hi link Conceal White
+"hi clear Cursor | hi link Cursor bgWhite
+"hi clear CursorIM | hi link CursorIM bgWhite
+"hi clear CursorColumn | hi link CursorColumn bgWhite
+"hi clear CursorLine | hi link CursorLine bgWhite
+"hi clear Directory | hi link Directory Blue
+"hi clear DiffAdd | hi link DiffAdd BrightGreenOnGreen
+"hi clear DiffChange | hi link DiffChange BlackOnBrightYellow
+"hi clear DiffDelete | hi link DiffDelete BrightRedOnBrightMagenta
+"hi clear DiffText | hi link DiffText BlackOnYellow
+"hi clear EndOfBuffer | hi link EndOfBuffer White
+"hi clear ErrorMsg | hi link ErrorMsg BrightWhiteOnBrightRed
+"hi clear VertSplit | hi link VertSplit Black
+"hi clear Folded | hi link Folded BrightWhiteOnBrightBlack
+"hi clear FoldColumn | hi link FoldColumn BoldBrightBlue
+"hi clear SignColumn | hi link SignColumn BrightWhite
+"hi clear IncSearch | hi link IncSearch BrightWhiteOnBrightBlue
+"hi clear LineNr | hi link LineNr BrightBlack
+"hi clear CursorLineNr | hi link CursorLineNR Black
+"hi clear MatchParen | hi link MatchParen BrightWhiteOnBrightBlue
+"hi clear ModeMsg | hi link ModeMsg Black
+"hi clear MoreMsg | hi link MoreMsg Green
+"hi clear NonText | hi link NonText White
+"hi clear Normal | hi link Normal Black
+"hi clear Pmenu | hi link Pmenu Black
+"hi clear PmenuSel | hi link PmenuSel BrightWhiteOnBrightBlue
+"hi clear PmenuSbar | hi link PmenuSbar BrightWhiteOnBrightWhite
+"hi clear PmenuThumb | hi link PmenuThumb WhiteOnWhite
+"hi clear Question | hi link Question Green
+"hi clear QuickFixLine | hi link QuickFixLine Magenta
+"hi clear Search | hi link Search BrightWhiteOnBrightBlue
+"hi clear SpecialKey | hi link SpecialKey White
+"hi clear SpellBad | hi link SpellBad UnderlineRed
+"hi clear SpellCap | hi link SpellCap UnderlineGreen
+"hi clear SpellLocal | hi link SpellLocal UnderlineYellow
+"hi clear SpellRare | hi link SpellRare UnderlineYellow
+"hi clear StatusLine | hi link StatusLine BoldBlue
+"hi clear StatusLineNC | hi link StatusLineNC White
+"hi clear StatusLineTerm | hi link StatusLineTerm Blue
+"hi clear StatusLineTermNC | hi link StatusLineTermNC White
+"hi clear TabLine | hi link TabLine bgWhite
+"hi clear TabLineFill | hi link TabLineFill bgWhite
+"hi clear TabLineSel | hi link TabLineSel Black
+"hi clear Title | hi link Title Magenta
+"hi clear Visual | hi link Visual bgWhite
+"hi clear VisualNOS | hi link VisualNOS bgWhite
+"hi clear WarningMsg | hi link WarningMsg BrightWhiteOnYellow
+"hi clear WildMenu | hi link WildMenu BrightWhiteOnBrightBlue
+"hi clear Todo | hi link Todo BrightWhiteOnRed
+"hi clear Error | hi link Error BrightWhiteOnBrightRed
 
 "===============================================================================
 " Syntax Group Name
 
-hi clear Comment | hi link Comment BrightMagenta
+"hi clear Comment | hi link Comment BrightMagenta
 
-hi clear Constant | hi link Constant Magenta
+"hi clear Constant | hi link Constant Magenta
 "String
 "Character
 "Number
 "Boolean
 "Float
 
-hi clear Identifier | hi link Identifier Blue
+"hi clear Identifier | hi link Identifier Blue
 "Function
 
-hi clear Statement | hi link Statement Blue
+"hi clear Statement | hi link Statement Blue
 "Conditional
 "Repeat
 "Label
@@ -252,26 +309,26 @@ hi clear Statement | hi link Statement Blue
 "Keyword
 "Exception
 
-hi clear PreProc | hi link PreProc Black
+"hi clear PreProc | hi link PreProc Black
 "Include
 "Define
 "Macro
 "PreCondit
 
-hi clear Type | hi link Type Green
+"hi clear Type | hi link Type Green
 "StorageClass
 "Structure
 "Typedef
 "Special
 
-hi clear Special | hi link Special Magenta
+"hi clear Special | hi link Special Magenta
 "SpecialChar
 "Tag
 "Delimiter
 "SpecialComment
 "Debug
 
-hi clear Underlined | hi link Underlined UnderlineBlue
+"hi clear Underlined | hi link Underlined UnderlineBlue
 "hi Ignore
 
 "===============================================================================
@@ -279,7 +336,7 @@ hi clear Underlined | hi link Underlined UnderlineBlue
 
 "" Ruby
 
-hi link rubyInclude PreProc
+"hi link rubyInclude PreProc
 "hi link rubyModule Include
 "hi link rubyClass Include
 "hi link rubyAttribute Include
@@ -303,7 +360,7 @@ hi link rubyInclude PreProc
 
 "hi link rubyBlockParameter Black
 "hi link rubyString String
-hi link rubyString String
+"hi link rubyString String
 "hi link rubyStringDelimiter String
 "hi link rubyInterpolationDelimiter String
 "hi link rubyInteger Number
@@ -488,10 +545,10 @@ hi link rubyString String
 "hi link vimVar Normal
 
 " GitGutter
-hi link GitGutterAdd BrightGreen
-hi link GitGutterChange Yellow
-hi link GitGutterDelete BrightRed
-hi link GitGutterChangeDelete Magenta
+"hi link GitGutterAdd BrightGreen
+"hi link GitGutterChange Yellow
+"hi link GitGutterDelete BrightRed
+"hi link GitGutterChangeDelete Magenta
 
 " netrw
 "hi netrwVersion
@@ -504,4 +561,4 @@ hi link GitGutterChangeDelete Magenta
 "hi netrwExe
 "hi netrwSuffixes
 "hi netrwTreeBar
-hi link netrwTreeBar Black
+"hi link netrwTreeBar Black
