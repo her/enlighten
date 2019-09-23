@@ -1,18 +1,7 @@
-" Enlighten - A Color Scheme
+" Enlighten - Color for everybody
 " Maintainer: Melanie Berkley <http://berkley.io>
-" Last Change: 2018 Mar 26
+" Last Change: 2019 Sep 22
 " License: BSD-2-Clause
-
-"
-"
-" s:Color('HighlightGroup',
-" \ s:gui_foreground, s:gui_background,
-" \ s:term_foreground, s:term_background,
-" \ 'display_mode')
-"
-" Print out colors as you mix them
-" :echohl HighLightGroup | echo 'The quick brown fox jumps over the lazy dog.'
-"
 
 " Initialize Enlighten
 hi clear
@@ -23,21 +12,21 @@ let colors_name = "enlighten"
 
 " GUI colors
 let s:g_black = "#000000"
-let s:g_red = "#C73461"
-let s:g_green = "#388123"
-let s:g_yellow = "#ED6237"
-let s:g_blue = "#1F5EBE"
-let s:g_magenta = "#4A34A2"
-let s:g_cyan = "#367E7F"
+let s:g_red = "#B83520"
+let s:g_green = "#268800"
+let s:g_yellow = "#C1512C"
+let s:g_blue = "#2C69EE"
+let s:g_magenta = "#722ECF"
+let s:g_cyan = "#408065"
 let s:g_white = "#A3AFB6"
 let s:g_bright_black = "#666666"
-let s:g_bright_red = "#C30500"
-let s:g_bright_green = "#76BA67"
-let s:g_bright_yellow = "#F3AB3D"
-let s:g_bright_blue = "#5BA5EF"
-let s:g_bright_magenta = "#EC5281"
-let s:g_bright_cyan = "#4DADAF"
-let s:g_bright_white = "#F5F5F5"
+let s:g_bright_red = "#D84D62"
+let s:g_bright_green = "#5EB055"
+let s:g_bright_yellow = "#DFC240"
+let s:g_bright_blue = "#4D7DEA"
+let s:g_bright_magenta = "#C990F8"
+let s:g_bright_cyan = "#55B0B2"
+let s:g_bright_white = "#FEFBED"
 
 " Terminal colors
 let s:black = "0"
@@ -57,6 +46,10 @@ let s:bright_magenta = "13"
 let s:bright_cyan = "14"
 let s:bright_white = "15"
 
+" s:Color('HighlightGroup',
+" \ s:gui_foreground, s:gui_background,
+" \ s:term_foreground, s:term_background,
+" \ 'display_mode')
 function! s:Color(group, g_fg, g_bg, fg, bg, ...)
   if empty(a:0)
     let style = "NONE"
@@ -74,6 +67,9 @@ endfunction
 " Allow highlighting of Operators
 autocmd FileType * call <SID>def_base_syntax()
 function! s:def_base_syntax()
+  if &ft =~ 'help\|netrw'
+      return
+  endif
   syntax match commonOperator "\(+\|=\|-\|\^\|\*\)"
   syntax match baseDelimiter ","
   hi link commonOperator Blue
@@ -99,24 +95,6 @@ call s:Color("BrightMagenta", s:g_bright_magenta, "NONE", s:bright_magenta, "NON
 call s:Color("BrightCyan", s:g_bright_cyan, "NONE", s:bright_cyan, "NONE")
 call s:Color("BrightWhite", s:g_bright_white, "NONE", s:bright_white, "NONE")
 
-" Bold foregound colors
-call s:Color("BoldBlack", s:g_black, "NONE", s:black, "NONE", "bold")
-call s:Color("BoldRed", s:g_red, "NONE", s:red, "NONE", "bold")
-call s:Color("BoldGreen", s:g_green, "NONE", s:green, "NONE", "bold")
-call s:Color("BoldYellow", s:g_yellow, "NONE", s:yellow, "NONE", "bold")
-call s:Color("BoldBlue", s:g_blue, "NONE", s:blue, "NONE", "bold")
-call s:Color("BoldMagenta", s:g_magenta, "NONE", s:magenta, "NONE", "bold")
-call s:Color("BoldCyan", s:g_cyan, "NONE", s:cyan, "NONE", "bold")
-call s:Color("BoldWhite", s:g_white, "NONE", s:white, "NONE", "bold")
-call s:Color("BoldBrightBlack", s:g_bright_black, "NONE", s:bright_black, "NONE", "bold")
-call s:Color("BoldBrightRed", s:g_bright_red, "NONE", s:bright_red, "NONE", "bold")
-call s:Color("BoldBrightGreen", s:g_bright_green, "NONE", s:bright_green, "NONE", "bold")
-call s:Color("BoldBrightYellow", s:g_bright_yellow, "NONE", s:bright_yellow, "NONE", "bold")
-call s:Color("BoldBrightBlue", s:g_bright_blue, "NONE", s:bright_blue, "NONE", "bold")
-call s:Color("BoldBrightMagenta", s:g_bright_magenta, "NONE", s:bright_magenta, "NONE", "bold")
-call s:Color("BoldBrightCyan", s:g_bright_cyan, "NONE", s:bright_cyan, "NONE", "bold")
-call s:Color("BoldBrightWhite", s:g_bright_white, "NONE", s:bright_white, "NONE", "bold")
-
 " Background colors
 call s:Color("bgBlack", "NONE", s:g_black, "NONE", s:black, "NONE")
 call s:Color("bgRed", "NONE", s:g_red, "NONE", s:red, "NONE")
@@ -134,6 +112,24 @@ call s:Color("bgBrightBlue", "NONE", s:g_bright_blue, "NONE", s:bright_blue, "NO
 call s:Color("bgBrightMagenta", "NONE", s:g_bright_magenta, "NONE", s:bright_magenta, "NONE")
 call s:Color("bgBrightCyan", "NONE", s:g_bright_cyan, "NONE", s:bright_cyan, "NONE")
 call s:Color("bgBrightWhite", "NONE", s:g_bright_white, "NONE", s:bright_white, "NONE")
+
+" Bold foregound colors
+call s:Color("BoldBlack", s:g_black, "NONE", s:black, "NONE", "bold")
+call s:Color("BoldRed", s:g_red, "NONE", s:red, "NONE", "bold")
+call s:Color("BoldGreen", s:g_green, "NONE", s:green, "NONE", "bold")
+call s:Color("BoldYellow", s:g_yellow, "NONE", s:yellow, "NONE", "bold")
+call s:Color("BoldBlue", s:g_blue, "NONE", s:blue, "NONE", "bold")
+call s:Color("BoldMagenta", s:g_magenta, "NONE", s:magenta, "NONE", "bold")
+call s:Color("BoldCyan", s:g_cyan, "NONE", s:cyan, "NONE", "bold")
+call s:Color("BoldWhite", s:g_white, "NONE", s:white, "NONE", "bold")
+call s:Color("BoldBrightBlack", s:g_bright_black, "NONE", s:bright_black, "NONE", "bold")
+call s:Color("BoldBrightRed", s:g_bright_red, "NONE", s:bright_red, "NONE", "bold")
+call s:Color("BoldBrightGreen", s:g_bright_green, "NONE", s:bright_green, "NONE", "bold")
+call s:Color("BoldBrightYellow", s:g_bright_yellow, "NONE", s:bright_yellow, "NONE", "bold")
+call s:Color("BoldBrightBlue", s:g_bright_blue, "NONE", s:bright_blue, "NONE", "bold")
+call s:Color("BoldBrightMagenta", s:g_bright_magenta, "NONE", s:bright_magenta, "NONE", "bold")
+call s:Color("BoldBrightCyan", s:g_bright_cyan, "NONE", s:bright_cyan, "NONE", "bold")
+call s:Color("BoldBrightWhite", s:g_bright_white, "NONE", s:bright_white, "NONE", "bold")
 
 " Bold background colors
 call s:Color("bgBoldBlack", "NONE", s:g_black, "NONE", s:black, "bold")
@@ -154,137 +150,86 @@ call s:Color("bgBoldBrightCyan", "NONE", s:g_bright_cyan, "NONE", s:bright_cyan,
 call s:Color("bgBoldBrightWhite", "NONE", s:g_bright_white, "NONE", s:bright_white, "bold")
 
 " Color pairs
-call s:Color("BrightGreenOnGreen", s:g_green, s:g_bright_green, s:green, s:bright_green, "bold")
-call s:Color("BrightRedOnBrightMagenta", s:g_bright_red, s:g_bright_magenta, s:bright_red, s:bright_magenta, "bold")
-call s:Color("BrightWhiteOnBrightRed", s:g_bright_white, s:g_bright_red, s:bright_white, s:bright_red)
-call s:Color("BrightWhiteOnBrightBlack", s:g_bright_white, s:g_bright_black, s:bright_white, s:bright_black)
-call s:Color("BrightWhiteOnBrightBlue", s:g_bright_white, s:g_bright_blue, s:bright_white, s:bright_blue)
-call s:Color("BrightWhiteOnBrightWhite", s:g_bright_white, s:g_bright_white, s:bright_white, s:bright_white)
-call s:Color("BrightWhiteOnWhite", s:g_bright_white, s:g_white, s:bright_white, s:white)
-call s:Color("BrightWhiteOnYellow", s:g_bright_white, s:g_yellow, s:bright_white, s:yellow)
-call s:Color("BrightWhiteOnRed", s:g_bright_white, s:g_red, s:bright_white, s:red)
-call s:Color("BlueOnWhite", s:g_blue, s:g_white, s:blue, s:white,"bold")
+call s:Color("BlackOnBrightYellow", s:g_black, s:g_bright_yellow, s:black, s:bright_yellow, "NONE")
+call s:Color("BlackOnGreen", s:g_black, s:g_green, s:black, s:green, "NONE")
+call s:Color("BlackOnRed", s:g_black, s:g_red, s:black, s:red, "NONE")
+call s:Color("BlackOnWhite", s:g_black, s:g_white, s:black, s:white, "NONE")
+call s:Color("BlackOnYellow", s:g_black, s:g_yellow, s:black, s:yellow, "NONE")
+call s:Color("BrightBlackOnWhite", s:g_bright_black, s:g_white, s:bright_black, s:white, "NONE")
+call s:Color("WhiteOnBlack", s:g_white, s:g_black, s:white, s:black, "NONE")
+call s:Color("WhiteOnRed", s:g_white, s:g_red, s:white, s:red, "NONE")
+call s:Color("WhiteOnWhite", s:g_white, s:g_white, s:white, s:white, "NONE")
 
-"function! s:Color(group, g_fg, g_bg, fg, bg, ...)
-call s:Color("WhiteOnRed", s:g_white, s:g_red, s:white, s:red)
-call s:Color("BlackOnYellow", s:g_black, s:g_yellow, s:black, s:yellow, "bold")
-call s:Color("WhiteOnWhite", s:g_white, s:g_white, s:white, s:white)
-call s:Color("BlackOnBrightYellow", s:g_black, s:g_bright_yellow, s:black, s:bright_yellow, "bold")
+" Color pairs with Styles
 call s:Color("BlackOnWhiteUnderline", s:g_black, s:g_white, s:black, s:white, "underline")
-call s:Color("Underline", "NONE", "NONE", "NONE", "NONE", "underline")
-call s:Color("Reverse", "NONE", "NONE", "NONE", "NONE", "reverse")
-call s:Color("Bold", "NONE", "NONE", "NONE", "NONE", "bold")
+call s:Color("BlackOnWhiteBold", s:g_black, s:g_white, s:black, s:white, "bold")
+call s:Color("BlackOnBrightYellowBold", s:g_black, s:g_bright_yellow, s:black, s:bright_yellow, "bold")
 
-call s:Color("UnderlineBlack", s:g_black, "NONE", s:black, "NONE", "underline")
-call s:Color("UnderlineBrightBlack", s:g_bright_black, "NONE", s:bright_black, "NONE", "underline")
-call s:Color("UnderlineRed", s:g_red, "NONE", s:red, "NONE", "underline")
-call s:Color("UnderlineGreen", s:g_green, "NONE", s:green, "NONE", "underline")
-call s:Color("UnderlineYellow", s:g_yellow, "NONE", s:yellow, "NONE", "underline")
-call s:Color("UnderlineBlue", s:g_blue, "NONE", s:blue, "NONE", "underline")
+" Foreground colors with Styles
+call s:Color("MagentaUnderline", s:g_magenta, "NONE", s:magenta, "NONE", "underline")
+
+" Styles
+call s:Color("Bold", "NONE", "NONE", "NONE", "NONE", "bold")
+call s:Color("Inverse", "NONE", "NONE", "NONE", "NONE", "inverse")
+call s:Color("Reverse", "NONE", "NONE", "NONE", "NONE", "reverse")
+call s:Color("Underline", "NONE", "NONE", "NONE", "NONE", "underline")
+
 "===============================================================================
 " Highlight groups
 
-highlight! IncSearch      Reverse
-highlight! ModeMsg        Bold
-highlight! TermCursor     Reverse
-highlight! TabLineSel     Bold
-highlight! TabLineFill    Reverse
-highlight! CursorLine     Underline
-
-highlight! SpecialKey     Blue
-highlight! NonText        BrightBlue
-highlight! Directory      Blue
-highlight! ErrorMsg       WhiteOnRed
-highlight! MoreMsg        Green
-highlight! CursorLineNr   Yellow
-highlight! Question       Green
-highlight! Title          Magenta
-highlight! WarningMsg     Red
-highlight! WildMenu       BlackOnYellow
-highlight! Conceal        WhiteOnWhite
-highlight! SpellBad       Red
-highlight! SpellRare      Magenta
-highlight! SpellLocal     BrightCyan
-highlight! PmenuSbar      BrightBlack
-highlight! PmenuThumb     Black
-highlight! TabLine        BlackOnWhiteUnderline
-highlight! CursorColumn   bgWhite
-highlight! MatchParen     bgBrightCyan
-highlight! Constant       Red
-highlight! Special        Magenta
-highlight! Identifier     Cyan
-highlight! Statement      Yellow
-highlight! PreProc        Magenta
-highlight! Type           Green
-highlight! Underlined     cterm=underline ctermfg=5
-highlight! Ignore         BrightWhite
-highlight! Error          WhiteOnRed
-highlight! Todo           BlackOnBrightYellow
-
-highlight! LineNr         White
-highlight! Comment        White
-highlight! ColorColumn    ctermfg=8    ctermbg=7
-highlight! Folded         ctermfg=8    ctermbg=7
-highlight! FoldColumn     ctermfg=8    ctermbg=7
-highlight! Pmenu          ctermfg=0    ctermbg=7
-highlight! PmenuSel       ctermfg=7    ctermbg=0
-highlight! SpellCap       ctermfg=8    ctermbg=7
-highlight! StatusLine     ctermfg=0    ctermbg=7    cterm=bold
-highlight! StatusLineNC   ctermfg=8    ctermbg=7    cterm=NONE
-highlight! VertSplit      ctermfg=8    ctermbg=7    cterm=NONE
-highlight! SignColumn                  ctermbg=7
-
-"hi clear ColorColumn | hi link ColorColumn bgWhite
-"hi clear Conceal | hi link Conceal White
-"hi clear Cursor | hi link Cursor bgWhite
-"hi clear CursorIM | hi link CursorIM bgWhite
-"hi clear CursorColumn | hi link CursorColumn bgWhite
-"hi clear CursorLine | hi link CursorLine bgWhite
-"hi clear Directory | hi link Directory Blue
-"hi clear DiffAdd | hi link DiffAdd BrightGreenOnGreen
-"hi clear DiffChange | hi link DiffChange BlackOnBrightYellow
-"hi clear DiffDelete | hi link DiffDelete BrightRedOnBrightMagenta
-"hi clear DiffText | hi link DiffText BlackOnYellow
-"hi clear EndOfBuffer | hi link EndOfBuffer White
-"hi clear ErrorMsg | hi link ErrorMsg BrightWhiteOnBrightRed
-"hi clear VertSplit | hi link VertSplit Black
-"hi clear Folded | hi link Folded BrightWhiteOnBrightBlack
-"hi clear FoldColumn | hi link FoldColumn BoldBrightBlue
-"hi clear SignColumn | hi link SignColumn BrightWhite
-"hi clear IncSearch | hi link IncSearch BrightWhiteOnBrightBlue
-"hi clear LineNr | hi link LineNr BrightBlack
-"hi clear CursorLineNr | hi link CursorLineNR Black
-"hi clear MatchParen | hi link MatchParen BrightWhiteOnBrightBlue
-"hi clear ModeMsg | hi link ModeMsg Black
-"hi clear MoreMsg | hi link MoreMsg Green
-"hi clear NonText | hi link NonText White
-"hi clear Normal | hi link Normal Black
-"hi clear Pmenu | hi link Pmenu Black
-"hi clear PmenuSel | hi link PmenuSel BrightWhiteOnBrightBlue
-"hi clear PmenuSbar | hi link PmenuSbar BrightWhiteOnBrightWhite
-"hi clear PmenuThumb | hi link PmenuThumb WhiteOnWhite
-"hi clear Question | hi link Question Green
-"hi clear QuickFixLine | hi link QuickFixLine Magenta
-"hi clear Search | hi link Search BrightWhiteOnBrightBlue
-"hi clear SpecialKey | hi link SpecialKey White
-"hi clear SpellBad | hi link SpellBad UnderlineRed
-"hi clear SpellCap | hi link SpellCap UnderlineGreen
-"hi clear SpellLocal | hi link SpellLocal UnderlineYellow
-"hi clear SpellRare | hi link SpellRare UnderlineYellow
-"hi clear StatusLine | hi link StatusLine BoldBlue
-"hi clear StatusLineNC | hi link StatusLineNC White
-"hi clear StatusLineTerm | hi link StatusLineTerm Blue
-"hi clear StatusLineTermNC | hi link StatusLineTermNC White
-"hi clear TabLine | hi link TabLine bgWhite
-"hi clear TabLineFill | hi link TabLineFill bgWhite
-"hi clear TabLineSel | hi link TabLineSel Black
-"hi clear Title | hi link Title Magenta
-"hi clear Visual | hi link Visual bgWhite
-"hi clear VisualNOS | hi link VisualNOS bgWhite
-"hi clear WarningMsg | hi link WarningMsg BrightWhiteOnYellow
-"hi clear WildMenu | hi link WildMenu BrightWhiteOnBrightBlue
-"hi clear Todo | hi link Todo BrightWhiteOnRed
-"hi clear Error | hi link Error BrightWhiteOnBrightRed
+highlight! link ColorColumn    BrightBlackOnWhite
+highlight! link Comment        White
+highlight! link Conceal        WhiteOnWhite
+highlight! link Constant       Red
+highlight! link CursorColumn   bgWhite
+highlight! link CursorLine     Underline
+highlight! link CursorLineNr   Yellow
+highlight! link DiffAdd        BlackOnGreen
+highlight! link DiffChange     BlackOnYellow
+highlight! link DiffDelete     BlackOnRed
+highlight! link DiffText       BlackOnBrightYellowBold
+highlight! link Directory      Blue
+highlight! link Error          WhiteOnRed
+highlight! link ErrorMsg       WhiteOnRed
+highlight! link FoldColumn     BrightBlackOnWhite
+highlight! link Folded         BrightBlackOnWhite
+highlight! link Identifier     Cyan
+highlight! link Ignore         BrightWhite
+highlight! link IncSearch      Reverse
+highlight! link LineNr         White
+highlight! link MatchParen     bgBrightCyan
+highlight! link ModeMsg        Bold
+highlight! link MoreMsg        Green
+highlight! link NonText        BrightBlue
+highlight! link Pmenu          BlackOnWhite
+highlight! link PmenuSbar      BrightBlack
+highlight! link PmenuSel       WhiteOnBlack
+highlight! link PmenuThumb     Black
+highlight! link PreProc        Magenta
+highlight! link Question       Green
+highlight! link Search         BlackOnBrightYellow
+highlight! link SignColumn     bgWhite
+highlight! link Special        Magenta
+highlight! link SpecialKey     Blue
+highlight! link SpellBad       Red
+highlight! link SpellCap       BrightBlackOnWhite
+highlight! link SpellLocal     BrightCyan
+highlight! link SpellRare      Magenta
+highlight! link Statement      Yellow
+highlight! link StatusLine     BlackOnWhiteBold
+highlight! link StatusLineNC   BrightBlackOnWhite
+highlight! link TabLine        BlackOnWhiteUnderline
+highlight! link TabLineFill    Reverse
+highlight! link TabLineSel     Bold
+highlight! link TermCursor     Reverse
+highlight! link Title          Magenta
+highlight! link Todo           BlackOnBrightYellow
+highlight! link Type           Green
+highlight! link Underlined     MagentaUnderline
+highlight! link VertSplit      BrightBlackOnWhite
+highlight! link Visual         Inverse
+highlight! link WarningMsg     Red
+highlight! link WildMenu       BlackOnYellow
 
 "===============================================================================
 " Syntax Group Name
