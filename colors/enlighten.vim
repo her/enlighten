@@ -160,6 +160,14 @@ call s:Color("WhiteOnBlack", s:g_white, s:g_black, s:white, s:black, "NONE")
 call s:Color("WhiteOnRed", s:g_white, s:g_red, s:white, s:red, "NONE")
 call s:Color("WhiteOnWhite", s:g_white, s:g_white, s:white, s:white, "NONE")
 
+call s:Color("WhiteOnBrightBlack", s:g_white, s:g_bright_black, s:white, s:bright_black, "NONE")
+
+call s:Color("BrightWhiteOnBrightBlack", s:g_bright_white, s:g_bright_black, s:bright_white, s:bright_black, "NONE")
+
+call s:Color("BrightWhiteOnBrightBlackBold", s:g_bright_white, s:g_bright_black, s:bright_white, s:bright_black, "bold")
+
+call s:Color("BrightBlackOnBrightWhite", s:g_bright_black, s:g_bright_white, s:bright_black, s:bright_white, "NONE")
+
 " Color pairs with Styles
 call s:Color("BlackOnWhiteUnderline", s:g_black, s:g_white, s:black, s:white, "underline")
 call s:Color("BlackOnWhiteBold", s:g_black, s:g_white, s:black, s:white, "bold")
@@ -177,8 +185,34 @@ call s:Color("Underline", "NONE", "NONE", "NONE", "NONE", "underline")
 "===============================================================================
 " Highlight groups
 
-highlight! link ColorColumn    BrightBlackOnWhite
-highlight! link Comment        White
+if &background == "light"
+  highlight! link LineNr         White
+  highlight! link Comment        White
+  highlight! link ColorColumn    BrightBlackOnWhite
+  highlight! link FoldColumn     BrightBlackOnWhite
+  highlight! link Folded         BrightBlackOnWhite
+  highlight! link Pmenu          BlackOnWhite
+  highlight! link PmenuSel       WhiteOnBlack
+  highlight! link SpellCap       BrightBlackOnWhite
+  highlight! link StatusLine     BlackOnWhiteBold
+  highlight! link StatusLineNC   BrightBlackOnWhite
+  highlight! link SignColumn     bgWhite
+  highlight! link VertSplit      BrightBlackOnWhite
+else
+  highlight! link LineNr         BrightBlack
+  highlight! link Comment        BrightBlack
+  highlight! link ColorColumn    WhiteOnBrightBlack
+  highlight! link FoldColumn     WhiteOnBrightBlack
+  highlight! link Folded         WhiteOnBrightBlack
+  highlight! link Pmenu          BrightWhiteOnBrightBlack
+  highlight! link PmenuSel       BrightBlackOnBrightWhite
+  highlight! link SpellCap       WhiteOnBrightBlack
+  highlight! link StatusLine     BrightWhiteOnBrightBlackBold
+  highlight! link StatusLineNC   BrightWhiteOnBrightBlack
+  highlight! link SignColumn     bgBrightBlack
+  highlight! link VertSplit      BrightWhiteOnBrightBlack
+end
+
 highlight! link Conceal        WhiteOnWhite
 highlight! link Constant       Red
 highlight! link CursorColumn   bgWhite
@@ -191,33 +225,24 @@ highlight! link DiffText       BlackOnBrightYellowBold
 highlight! link Directory      Blue
 highlight! link Error          WhiteOnRed
 highlight! link ErrorMsg       WhiteOnRed
-highlight! link FoldColumn     BrightBlackOnWhite
-highlight! link Folded         BrightBlackOnWhite
 highlight! link Identifier     Cyan
 highlight! link Ignore         BrightWhite
 highlight! link IncSearch      Reverse
-highlight! link LineNr         White
 highlight! link MatchParen     bgBrightCyan
 highlight! link ModeMsg        Bold
 highlight! link MoreMsg        Green
 highlight! link NonText        BrightBlue
-highlight! link Pmenu          BlackOnWhite
 highlight! link PmenuSbar      BrightBlack
-highlight! link PmenuSel       WhiteOnBlack
 highlight! link PmenuThumb     Black
 highlight! link PreProc        Magenta
 highlight! link Question       Green
 highlight! link Search         BlackOnBrightYellow
-highlight! link SignColumn     bgWhite
 highlight! link Special        Magenta
 highlight! link SpecialKey     Blue
 highlight! link SpellBad       Red
-highlight! link SpellCap       BrightBlackOnWhite
 highlight! link SpellLocal     BrightCyan
 highlight! link SpellRare      Magenta
 highlight! link Statement      Yellow
-highlight! link StatusLine     BlackOnWhiteBold
-highlight! link StatusLineNC   BrightBlackOnWhite
 highlight! link TabLine        BlackOnWhiteUnderline
 highlight! link TabLineFill    Reverse
 highlight! link TabLineSel     Bold
@@ -226,7 +251,6 @@ highlight! link Title          Magenta
 highlight! link Todo           BlackOnBrightYellow
 highlight! link Type           Green
 highlight! link Underlined     MagentaUnderline
-highlight! link VertSplit      BrightBlackOnWhite
 highlight! link Visual         Inverse
 highlight! link WarningMsg     Red
 highlight! link WildMenu       BlackOnYellow
