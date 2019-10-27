@@ -72,8 +72,8 @@ function! s:def_base_syntax()
   endif
   syntax match commonOperator "\(+\|=\|-\|\^\|\*\)"
   syntax match baseDelimiter ","
-  hi link commonOperator Blue
-  hi link baseDelimiter Black
+  highlight! link commonOperator Blue
+  highlight! link baseDelimiter Blue
 endfunction
 
 "===============================================================================
@@ -186,8 +186,8 @@ call s:Color("Underline", "NONE", "NONE", "NONE", "NONE", "underline")
 " Highlight groups
 
 if &background == "light"
-  highlight! link LineNr         White
-  highlight! link Comment        White
+  highlight! link LineNr         BrightBlack
+  highlight! link Comment        BrightBlack
   highlight! link ColorColumn    BrightBlackOnWhite
   highlight! link FoldColumn     BrightBlackOnWhite
   highlight! link Folded         BrightBlackOnWhite
