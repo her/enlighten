@@ -514,10 +514,10 @@ highlight! link WildMenu       BlackOnYellow
 "hi link vimVar Normal
 
 " GitGutter
-"hi link GitGutterAdd BrightGreen
-"hi link GitGutterChange Yellow
-"hi link GitGutterDelete BrightRed
-"hi link GitGutterChangeDelete Magenta
+highlight!link GitGutterAdd BrightGreen
+highlight!link GitGutterChange BrightBlack
+highlight!link GitGutterDelete BrightRed
+highlight!link GitGutterChangeDelete BrightMagenta
 
 " netrw
 "hi netrwVersion
