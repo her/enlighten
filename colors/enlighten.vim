@@ -26,7 +26,7 @@ if &bg=="light"
   highlight commonOperator ctermfg=4
   highlight baseDelimiter ctermfg=4
 
-  highlight Comment        ctermfg=4
+  highlight Comment        ctermfg=7
   highlight Constant       ctermfg=1
   highlight Identifier     ctermfg=6
   highlight Statement      ctermfg=3
@@ -79,12 +79,12 @@ if &bg=="light"
   highlight TabLineFill    ctermfg=0
   highlight TabLineSel     cterm=bold
   highlight Title          ctermfg=5
-  highlight Visual         cterm=inverse
+  highlight Visual         cterm=inverse ctermbg=NONE
 else
   highlight commonOperator ctermfg=12
   highlight baseDelimiter ctermfg=12
 
-  highlight Comment        ctermfg=12
+  highlight Comment        ctermfg=8
   highlight Constant       ctermfg=9
   highlight Identifier     ctermfg=14
   highlight Statement      ctermfg=11
@@ -137,7 +137,7 @@ else
   highlight TabLineFill    ctermfg=15
   highlight TabLineSel     cterm=bold
   highlight Title          ctermfg=13
-  highlight Visual         cterm=inverse
+  highlight Visual         cterm=inverse ctermbg=NONE
 endif
 
 "===============================================================================
@@ -192,19 +192,18 @@ endif
 
 "hi link rubyInclude PreProc
 "hi link rubyModule Include
-"hi link rubyClass Include
+highlight rubyClass ctermfg=4
+highlight rubyMacro ctermfg=4
 "hi link rubyAttribute Include
 
 "rubyPseudoVariable
 
 "hi link rubyPseudoVariable Blue
-"hi link rubyDefine Define
+highlight rubyDefine ctermfg=12
 "hi link rubyFunction Function
 "hi link rubyConstant Constant
 
-"rubySymbol
-
-"hi link rubySymbol Blue
+highlight rubySymbol ctermfg=5
 "hi link rubyConditional Conditional
 "hi link rubyException Exception
 "hi link rubyControl Repeat
@@ -213,13 +212,13 @@ endif
 "rubyBlockParameter
 
 "hi link rubyBlockParameter Black
-"hi link rubyString String
-"hi link rubyString String
-"hi link rubyStringDelimiter String
+highlight rubyString ctermfg=5
+highlight rubyStringDelimiter ctermfg=1
 "hi link rubyInterpolationDelimiter String
 "hi link rubyInteger Number
 "hi link rubyFloat Float
-"hi link rubyComment Comment
+" highlight rubyComment ctermfg=7
+highlight rubyTodo ctermfg=0 ctermbg=11 cterm=bold
 "hi link rubyAssertion Statement
 
 "hi rubyPseudoVariable
