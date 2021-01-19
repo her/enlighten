@@ -22,123 +22,64 @@ endfunction
 "===============================================================================
 " Highlight groups
 
-if &bg=="light"
-  highlight commonOperator ctermfg=4
-  highlight baseDelimiter ctermfg=4
+highlight commonOperator ctermfg=4
+highlight baseDelimiter ctermfg=4
 
-  highlight Comment        ctermfg=7
-  highlight Constant       ctermfg=1
-  highlight Identifier     ctermfg=6
-  highlight Statement      ctermfg=3
-  highlight PreProc        ctermfg=5
-  highlight Type           ctermfg=2
-  highlight Special        ctermfg=5
-  highlight Underlined     ctermfg=5 cterm=underline
-  highlight Ignore         ctermfg=7
-  highlight Error          ctermfg=7 ctermbg=1
-  highlight ErrorMsg       ctermfg=7 ctermbg=1
-  highlight ModeMsg        cterm=bold
-  highlight MoreMsg        ctermfg=2
-  highlight WarningMsg     ctermfg=1
-  highlight Todo           ctermfg=0 ctermbg=3
-  highlight LineNr         ctermfg=8
-  highlight ColorColumn    ctermfg=8 ctermbg=7
-  highlight Folded         ctermfg=8 ctermbg=7
-  highlight FoldColumn     ctermfg=8 ctermbg=7
-  highlight SignColumn     ctermfg=NONE ctermbg=NONE
-  highlight CursorColumn   ctermbg=7
-  highlight CursorLine     cterm=underline
-  highlight CursorLineNr   ctermfg=3
-  highlight Cursor         ctermfg=0
-  highlight CursorIM       ctermfg=0
-  highlight StatusLine     ctermfg=0 ctermbg=7 cterm=bold
-  highlight StatusLineNC   ctermfg=8 ctermbg=7
-  highlight VertSplit      ctermfg=8 ctermbg=7
-  highlight Conceal        ctermfg=7 ctermbg=7
-  highlight DiffAdd        ctermfg=0 ctermbg=2
-  highlight DiffChange     ctermfg=0 ctermbg=3
-  highlight DiffDelete     ctermfg=0 ctermbg=1
-  highlight DiffText       ctermfg=0 ctermbg=11 cterm=bold
-  highlight Directory      ctermfg=4
-  highlight IncSearch      cterm=reverse
-  highlight MatchParen     ctermbg=14
-  highlight NonText        ctermfg=4
-  highlight Pmenu          ctermfg=0 ctermbg=7
-  highlight PmenuSel       ctermfg=7 ctermbg=0
-  highlight PmenuSbar      ctermfg=8
-  highlight PmenuThumb     ctermfg=0
-  highlight WildMenu       ctermfg=0 ctermbg=3
-  highlight Question       ctermfg=2
-  highlight Search         ctermfg=0 ctermbg=11
-  highlight SpecialKey     ctermfg=4
-  highlight SpellCap       ctermfg=8 ctermbg=7
-  highlight SpellBad       ctermfg=1
-  highlight SpellLocal     ctermfg=6
-  highlight SpellRare      ctermfg=5
-  highlight TabLine        ctermfg=0 ctermbg=7 cterm=underline
-  highlight TabLineFill    ctermfg=0
-  highlight TabLineSel     cterm=bold
-  highlight Title          ctermfg=5
-  highlight Visual         cterm=inverse ctermbg=NONE
-else
-  highlight commonOperator ctermfg=12
-  highlight baseDelimiter ctermfg=12
+highlight Comment        ctermfg=7
+highlight Constant       ctermfg=1
+highlight Identifier     ctermfg=6
+highlight Statement      ctermfg=3
+highlight PreProc        ctermfg=5
+highlight Type           ctermfg=2
+highlight Special        ctermfg=5
+highlight Underlined     ctermfg=5 cterm=underline
+highlight Ignore         ctermfg=7
+highlight Error          ctermfg=7 ctermbg=1
+highlight ErrorMsg       ctermfg=7 ctermbg=1
+highlight ModeMsg        cterm=bold
+highlight MoreMsg        ctermfg=2
+highlight WarningMsg     ctermfg=1
+highlight Todo           ctermfg=0 ctermbg=3
+highlight LineNr         ctermfg=8
+highlight ColorColumn    ctermfg=8 ctermbg=7
+highlight Folded         ctermfg=8 ctermbg=7
+highlight FoldColumn     ctermfg=8 ctermbg=7
+highlight SignColumn     ctermfg=NONE ctermbg=NONE
+highlight CursorColumn   ctermbg=7
+highlight CursorLine     cterm=underline
+highlight CursorLineNr   ctermfg=3
+highlight Cursor         ctermfg=0
+highlight CursorIM       ctermfg=0
+highlight StatusLine     ctermfg=0 ctermbg=7 cterm=bold
+highlight StatusLineNC   ctermfg=8 ctermbg=7
+highlight VertSplit      ctermfg=8 ctermbg=7
+highlight Conceal        ctermfg=7 ctermbg=7
+highlight DiffAdd        ctermfg=0 ctermbg=2
+highlight DiffChange     ctermfg=0 ctermbg=3
+highlight DiffDelete     ctermfg=0 ctermbg=1
+highlight DiffText       ctermfg=0 ctermbg=11 cterm=bold
+highlight Directory      ctermfg=4
+highlight IncSearch      cterm=reverse
+highlight MatchParen     ctermbg=14
+highlight NonText        ctermfg=4
+highlight Pmenu          ctermfg=0 ctermbg=7
+highlight PmenuSel       ctermfg=7 ctermbg=0
+highlight PmenuSbar      ctermfg=8
+highlight PmenuThumb     ctermfg=0
+highlight WildMenu       ctermfg=0 ctermbg=3
+highlight Question       ctermfg=2
+highlight Search         ctermfg=0 ctermbg=11
+highlight SpecialKey     ctermfg=4
+highlight SpellCap       ctermfg=8 ctermbg=7
+highlight SpellBad       ctermfg=1
+highlight SpellLocal     ctermfg=6
+highlight SpellRare      ctermfg=5
+highlight TabLine        ctermfg=0 ctermbg=7 cterm=underline
+highlight TabLineFill    ctermfg=0
+highlight TabLineSel     cterm=bold
+highlight Title          ctermfg=5
+highlight Visual         cterm=inverse ctermbg=NONE
 
-  highlight Comment        ctermfg=8
-  highlight Constant       ctermfg=9
-  highlight Identifier     ctermfg=14
-  highlight Statement      ctermfg=11
-  highlight PreProc        ctermfg=13
-  highlight Type           ctermfg=10
-  highlight Special        ctermfg=13
-  highlight Underlined     ctermfg=13 cterm=underline
-  highlight Ignore         ctermfg=15
-  highlight Error          ctermfg=15 ctermbg=9
-  highlight ErrorMsg       ctermfg=15 ctermbg=9
-  highlight ModeMsg        cterm=bold
-  highlight MoreMsg        ctermfg=10
-  highlight WarningMsg     ctermfg=9
-  highlight Todo           ctermfg=8 ctermbg=11
-  highlight LineNr         ctermfg=7
-  highlight ColorColumn    ctermfg=7 ctermbg=8
-  highlight Folded         ctermfg=7 ctermbg=8
-  highlight FoldColumn     ctermfg=7 ctermbg=8
-  highlight SignColumn     ctermfg=NONE ctermbg=NONE
-  highlight CursorColumn   ctermbg=8
-  highlight CursorLine     cterm=underline
-  highlight CursorLineNr   ctermfg=11
-  highlight Cursor         ctermfg=8
-  highlight CursorIM       ctermfg=8
-  highlight StatusLine     ctermfg=8 ctermbg=15 cterm=bold
-  highlight StatusLineNC   ctermfg=7 ctermbg=8
-  highlight VertSplit      ctermfg=7 ctermbg=8
-  highlight Conceal        ctermfg=7 ctermbg=7
-  highlight DiffAdd        ctermfg=0 ctermbg=2
-  highlight DiffChange     ctermfg=0 ctermbg=3
-  highlight DiffDelete     ctermfg=0 ctermbg=1
-  highlight DiffText       ctermfg=0 ctermbg=11 cterm=bold
-  highlight Directory      ctermfg=12
-  highlight IncSearch      cterm=reverse
-  highlight MatchParen     ctermbg=14
-  highlight NonText        ctermfg=12
-  highlight Pmenu          ctermfg=15 ctermbg=8
-  highlight PmenuSel       ctermfg=8 ctermbg=15
-  highlight PmenuSbar      ctermfg=7
-  highlight PmenuThumb     ctermfg=15
-  highlight WildMenu       ctermfg=15 ctermbg=3
-  highlight Question       ctermfg=10
-  highlight Search         ctermfg=0 ctermbg=11
-  highlight SpecialKey     ctermfg=12
-  highlight SpellCap       ctermfg=7 ctermbg=8
-  highlight SpellBad       ctermfg=9
-  highlight SpellLocal     ctermfg=14
-  highlight SpellRare      ctermfg=13
-  highlight TabLine        ctermfg=15 ctermbg=8 cterm=underline
-  highlight TabLineFill    ctermfg=15
-  highlight TabLineSel     cterm=bold
-  highlight Title          ctermfg=13
-  highlight Visual         cterm=inverse ctermbg=NONE
-endif
 
 "===============================================================================
 " Syntax Group Name
@@ -190,7 +131,7 @@ endif
 
 " Ruby
 
-"hi link rubyInclude PreProc
+highlight rubyInclude ctermfg=4
 "hi link rubyModule Include
 highlight rubyClass ctermfg=4
 highlight rubyMacro ctermfg=4
@@ -217,7 +158,7 @@ highlight rubyStringDelimiter ctermfg=1
 "hi link rubyInterpolationDelimiter String
 "hi link rubyInteger Number
 "hi link rubyFloat Float
-" highlight rubyComment ctermfg=7
+highlight rubyComment ctermfg=4
 highlight rubyTodo ctermfg=0 ctermbg=11 cterm=bold
 "hi link rubyAssertion Statement
 
