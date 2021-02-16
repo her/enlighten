@@ -22,63 +22,63 @@ endfunction
 "===============================================================================
 " Highlight groups
 
-highlight commonOperator ctermfg=4
-highlight baseDelimiter ctermfg=4
+highlight commonOperator ctermfg=4 guifg=#5891F8
+highlight baseDelimiter ctermfg=4 guifg=#5891F8
 
-highlight Comment        ctermfg=7
-highlight Constant       ctermfg=1
-highlight Identifier     ctermfg=6
-highlight Statement      ctermfg=3
-highlight PreProc        ctermfg=5
-highlight Type           ctermfg=2
-highlight Special        ctermfg=5
-highlight Underlined     ctermfg=5 cterm=underline
-highlight Ignore         ctermfg=7
-highlight Error          ctermfg=7 ctermbg=1
-highlight ErrorMsg       ctermfg=7 ctermbg=1
-highlight ModeMsg        cterm=bold
-highlight MoreMsg        ctermfg=2
-highlight WarningMsg     ctermfg=1
-highlight Todo           ctermfg=0 ctermbg=3
-highlight LineNr         ctermfg=8
-highlight ColorColumn    ctermfg=8 ctermbg=7
-highlight Folded         ctermfg=8 ctermbg=7
-highlight FoldColumn     ctermfg=8 ctermbg=7
-highlight SignColumn     ctermfg=NONE ctermbg=NONE
-highlight CursorColumn   ctermbg=7
-highlight CursorLine     cterm=underline
-highlight CursorLineNr   ctermfg=3
-highlight Cursor         ctermfg=0
-highlight CursorIM       ctermfg=0
-highlight StatusLine     ctermfg=0 ctermbg=7 cterm=bold
-highlight StatusLineNC   ctermfg=8 ctermbg=7
-highlight VertSplit      ctermfg=8 ctermbg=7
-highlight Conceal        ctermfg=7 ctermbg=7
-highlight DiffAdd        ctermfg=0 ctermbg=2
-highlight DiffChange     ctermfg=0 ctermbg=3
-highlight DiffDelete     ctermfg=0 ctermbg=1
-highlight DiffText       ctermfg=0 ctermbg=11 cterm=bold
-highlight Directory      ctermfg=4
-highlight IncSearch      cterm=reverse
-highlight MatchParen     ctermbg=14
-highlight NonText        ctermfg=4
-highlight Pmenu          ctermfg=0 ctermbg=7
-highlight PmenuSel       ctermfg=7 ctermbg=0
-highlight PmenuSbar      ctermfg=8
-highlight PmenuThumb     ctermfg=0
-highlight WildMenu       ctermfg=0 ctermbg=3
-highlight Question       ctermfg=2
-highlight Search         ctermfg=0 ctermbg=11
-highlight SpecialKey     ctermfg=4
-highlight SpellCap       ctermfg=8 ctermbg=7
-highlight SpellBad       ctermfg=1
-highlight SpellLocal     ctermfg=6
-highlight SpellRare      ctermfg=5
-highlight TabLine        ctermfg=0 ctermbg=7 cterm=underline
-highlight TabLineFill    ctermfg=0
-highlight TabLineSel     cterm=bold
-highlight Title          ctermfg=5
-highlight Visual         cterm=inverse ctermbg=NONE
+highlight Comment        ctermfg=7 guifg=#BFBFBF
+highlight Constant       ctermfg=1 guifg=#E64B6A
+highlight Identifier     ctermfg=6 guifg=#43B9FC
+highlight Statement      ctermfg=3 guifg=#FD7B31
+highlight PreProc        ctermfg=5 guifg=#CE78F3
+highlight Type           ctermfg=2 guifg=#3BBE89
+highlight Special        ctermfg=5 guifg=#CE78F3
+highlight Underlined     ctermfg=5 cterm=underline guifg=#CE78F3 gui=underline
+highlight Ignore         ctermfg=7 guifg=#BFBFBF
+highlight Error          ctermfg=7 ctermbg=1 guifg=#BFBFBF guibg=#E64B6A
+highlight ErrorMsg       ctermfg=7 ctermbg=1 guifg=#BFBFBF guibg=#E64B6A
+highlight ModeMsg        cterm=bold gui=bold
+highlight MoreMsg        ctermfg=2 guifg=#3BBE89
+highlight WarningMsg     ctermfg=1 guifg=#E64B6A
+highlight Todo           ctermfg=0 ctermbg=3 guifg=#000000 guibg=#FD7B31
+highlight LineNr         ctermfg=8 guifg=#424242
+highlight ColorColumn    ctermfg=8 ctermbg=7 guifg=#424242 guibg=#BFBFBF
+highlight Folded         ctermfg=8 ctermbg=7 guifg=#424242 guibg=#BFBFBF
+highlight FoldColumn     ctermfg=8 ctermbg=7 guifg=#424242 guibg=#BFBFBF
+highlight SignColumn     ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE
+highlight CursorColumn   ctermbg=7 guibg=#BFBFBF
+highlight CursorLine     cterm=underline gui=underline
+highlight CursorLineNr   ctermfg=3 guifg=#FD7B31
+highlight Cursor         ctermfg=0 guifg=#000000
+highlight CursorIM       ctermfg=0 guifg=#000000
+highlight StatusLine     ctermfg=0 ctermbg=7 cterm=bold guifg=#000000
+highlight StatusLineNC   ctermfg=8 ctermbg=7 guifg=#424242 guibg=#BFBFBF
+highlight VertSplit      ctermfg=8 ctermbg=7 guifg=#424242 guibg=#BFBFBF
+highlight Conceal        ctermfg=7 ctermbg=7 guifg=#BFBFBF guibg=#BFBFBF
+highlight DiffAdd        ctermfg=0 ctermbg=2 guifg=#000000 guibg=#3BBE89
+highlight DiffChange     ctermfg=0 ctermbg=3 guifg=#000000 guibg=#000000
+highlight DiffDelete     ctermfg=0 ctermbg=1 guifg=#000000 guibg=#E64B6A
+highlight DiffText       ctermfg=0 ctermbg=11 cterm=bold guifg=#000000 gui=bold
+highlight Directory      ctermfg=4 guifg=#5891F8
+highlight IncSearch      cterm=reverse gui=reverse
+highlight MatchParen     ctermbg=14 guibg=#0CBACD
+highlight NonText        ctermfg=4 guifg=#5891F8
+highlight Pmenu          ctermfg=0 ctermbg=7 guifg=#000000 guibg=#BFBFBF
+highlight PmenuSel       ctermfg=7 ctermbg=0 guifg=#BFBFBF guibg=#000000
+highlight PmenuSbar      ctermfg=8 guifg=#424242
+highlight PmenuThumb     ctermfg=0 guifg=#000000
+highlight WildMenu       ctermfg=0 ctermbg=3 guifg=#000000 guibg=#FD7B31
+highlight Question       ctermfg=2 guifg=#3BBE89
+highlight Search         ctermfg=0 ctermbg=11 guifg=#000000 guibg=#FEF937
+highlight SpecialKey     ctermfg=4 guifg=#5891F8
+highlight SpellCap       ctermfg=8 ctermbg=7 guifg=#424242 guibg=#BFBFBF
+highlight SpellBad       ctermfg=1 guifg=#E64B6A
+highlight SpellLocal     ctermfg=6 guifg=#43B9FC
+highlight SpellRare      ctermfg=5 guifg=#CE78F3
+highlight TabLine        ctermfg=0 ctermbg=7 cterm=underline guifg=#000000 guibg=#BFBFBF gui=underline
+highlight TabLineFill    ctermfg=0 guifg=#000000
+highlight TabLineSel     cterm=bold gui=bold
+highlight Title          ctermfg=5 guifg=#CE78F3
+highlight Visual         cterm=inverse ctermbg=NONE gui=inverse guibg=NONE
 
 
 "===============================================================================
