@@ -131,20 +131,20 @@ highlight Visual         cterm=inverse ctermbg=NONE gui=inverse guibg=NONE
 
 " Ruby
 
-highlight rubyInclude ctermfg=4
+highlight rubyInclude ctermfg=4 guifg=#5891F8
 "hi link rubyModule Include
-highlight rubyClass ctermfg=4
-highlight rubyMacro ctermfg=4
+highlight rubyClass ctermfg=4 guifg=#5891F8
+highlight rubyMacro ctermfg=4 guifg=#5891F8
 "hi link rubyAttribute Include
 
 "rubyPseudoVariable
 
 "hi link rubyPseudoVariable Blue
-highlight rubyDefine ctermfg=12
+highlight rubyDefine ctermfg=12 guifg=#3E7FEE
 "hi link rubyFunction Function
 "hi link rubyConstant Constant
 
-highlight rubySymbol ctermfg=5
+highlight rubySymbol ctermfg=5 guifg=#CE78F3
 "hi link rubyConditional Conditional
 "hi link rubyException Exception
 "hi link rubyControl Repeat
@@ -153,13 +153,13 @@ highlight rubySymbol ctermfg=5
 "rubyBlockParameter
 
 "hi link rubyBlockParameter Black
-highlight rubyString ctermfg=5
-highlight rubyStringDelimiter ctermfg=1
+highlight rubyString ctermfg=5 guifg=#CE78F3
+highlight rubyStringDelimiter ctermfg=1 guifg=#E64B6A
 "hi link rubyInterpolationDelimiter String
 "hi link rubyInteger Number
 "hi link rubyFloat Float
-highlight rubyComment ctermfg=4
-highlight rubyTodo ctermfg=0 ctermbg=11 cterm=bold
+highlight rubyComment ctermfg=4 guifg=#5891F8
+highlight rubyTodo ctermfg=0 ctermbg=11 cterm=bold guifg=#000000 guibg=#FEF937
 "hi link rubyAssertion Statement
 
 "hi rubyPseudoVariable
