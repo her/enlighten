@@ -50,7 +50,7 @@ highlight CursorLine     cterm=underline gui=underline
 highlight CursorLineNr   ctermfg=3 guifg=#FD7B31
 highlight Cursor         ctermfg=0 guifg=#000000
 highlight CursorIM       ctermfg=0 guifg=#000000
-highlight StatusLine     ctermfg=0 ctermbg=7 cterm=bold guifg=#000000
+highlight StatusLine     ctermfg=0 ctermbg=7 cterm=bold guifg=#000000 guibg=#BFBFBF gui=bold
 highlight StatusLineNC   ctermfg=8 ctermbg=7 guifg=#424242 guibg=#BFBFBF
 highlight VertSplit      ctermfg=8 ctermbg=7 guifg=#424242 guibg=#BFBFBF
 highlight Conceal        ctermfg=7 ctermbg=7 guifg=#BFBFBF guibg=#BFBFBF
