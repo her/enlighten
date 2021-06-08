@@ -62,10 +62,7 @@ highlight Directory      ctermfg=4 guifg=#5891F8
 highlight IncSearch      cterm=reverse gui=reverse
 highlight MatchParen     ctermbg=14 guibg=#0CBACD
 highlight NonText        ctermfg=4 guifg=#5891F8
-highlight Pmenu          ctermfg=0 ctermbg=15 guifg=#000000 guibg=#BFBFBF
-highlight PmenuSel       ctermfg=0 ctermbg=7  guifg=#BFBFBF guibg=#000000
-highlight PmenuSbar      ctermfg=8 guifg=#424242
-highlight PmenuThumb     ctermfg=0 guifg=#000000
+
 highlight WildMenu       ctermfg=0 ctermbg=3 guifg=#000000 guibg=#FD7B31
 highlight Question       ctermfg=2 guifg=#3BBE89
 highlight Search         ctermfg=0 ctermbg=11 guifg=#000000 guibg=#FEF937
@@ -80,6 +77,23 @@ highlight TabLineSel     cterm=bold gui=bold
 highlight Title          ctermfg=5 guifg=#CE78F3
 highlight Visual         cterm=inverse ctermbg=NONE gui=inverse guibg=NONE
 
+" These are the highlight groups to style the little completion window vim
+" draws.  PmenuSbar and PmenuThumb control the styles of the scrollbar builtin
+" to the menu. Pmenu is the list of items and PmenuSel highlights the selected
+" item.
+"  ------------- 
+" | Pmenu     |x|<---- PmenuSbar
+" |-----------|x|
+" | PmenuSel  |x|
+" |-----------|x|
+" | Pmenu     |x|
+" |           |o|<---- PmenuThumb
+" |           |o|
+"  ------------- 
+highlight Pmenu          ctermfg=0 ctermbg=15 guifg=#000000 guibg=#BFBFBF
+highlight PmenuSel       ctermfg=0 ctermbg=7  guifg=#BFBFBF guibg=#000000
+highlight PmenuSbar      ctermfg=7 guifg=#424242
+highlight PmenuThumb     ctermfg=15 guifg=#000000
 
 "===============================================================================
 " Syntax Group Name
