@@ -62,8 +62,8 @@ highlight Directory      ctermfg=4 guifg=#5891F8
 highlight IncSearch      cterm=reverse gui=reverse
 highlight MatchParen     ctermbg=14 guibg=#0CBACD
 highlight NonText        ctermfg=4 guifg=#5891F8
-highlight Pmenu          ctermfg=0 ctermbg=7 guifg=#000000 guibg=#BFBFBF
-highlight PmenuSel       ctermfg=7 ctermbg=0 guifg=#BFBFBF guibg=#000000
+highlight Pmenu          ctermfg=0 ctermbg=15 guifg=#000000 guibg=#BFBFBF
+highlight PmenuSel       ctermfg=0 ctermbg=7  guifg=#BFBFBF guibg=#000000
 highlight PmenuSbar      ctermfg=8 guifg=#424242
 highlight PmenuThumb     ctermfg=0 guifg=#000000
 highlight WildMenu       ctermfg=0 ctermbg=3 guifg=#000000 guibg=#FD7B31
