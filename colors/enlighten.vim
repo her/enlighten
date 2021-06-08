@@ -356,3 +356,30 @@ highlight!link GitGutterChangeDelete BrightMagenta
 "hi netrwSuffixes
 "hi netrwTreeBar
 "hi link netrwTreeBar Black
+
+highlight BufferCurrent ctermfg=0 ctermbg=15
+highlight BufferCurrentIndex ctermfg=6 ctermbg=15
+highlight BufferCurrentMod ctermfg=3 ctermbg=15
+highlight BufferCurrentSign ctermfg=6 ctermbg=15
+highlight BufferCurrentTarget ctermfg=1 ctermbg=15 cterm=bold
+
+highlight BufferVisible ctermfg=0 ctermbg=15
+highlight BufferVisibleIndex ctermfg=0 ctermbg=15
+highlight BufferVisibleMod ctermfg=3 ctermbg=15
+highlight BufferVisibleSign ctermfg=0 ctermbg=15
+highlight BufferVisibleTarget ctermfg=1 ctermbg=15 cterm=bold
+
+highlight BufferInactive ctermfg=7 ctermbg=15
+highlight BufferInactiveIndex ctermfg=8 ctermbg=15
+highlight BufferInactiveMod ctermfg=3 ctermbg=15
+highlight BufferInactiveSign ctermfg=8 ctermbg=15
+highlight BufferInactiveTarget ctermfg=1 ctermbg=15 cterm=bold
+
+highlight BufferTabpages ctermfg=6 ctermbg=15 cterm=bold
+highlight BufferTabpageFill ctermfg=7 ctermbg=15
+
+highlight link BufferCurrentIcon BufferCurrent
+highlight link BufferVisibleIcon BufferVisible
+highlight link BufferInactiveIcon BufferInactive
+highlight link BufferOffset BufferTabpageFill
+
