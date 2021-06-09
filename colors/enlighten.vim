@@ -95,6 +95,7 @@ highlight PmenuSel       ctermfg=0 ctermbg=7  guifg=#BFBFBF guibg=#000000
 highlight PmenuSbar      ctermfg=7 guifg=#424242
 highlight PmenuThumb     ctermfg=15 guifg=#000000
 
+
 "===============================================================================
 " Syntax Group Name
 
@@ -396,4 +397,40 @@ highlight link BufferCurrentIcon BufferCurrent
 highlight link BufferVisibleIcon BufferVisible
 highlight link BufferInactiveIcon BufferInactive
 highlight link BufferOffset BufferTabpageFill
+
+if &background ==# 'dark'
+  highlight Pmenu          ctermfg=15 ctermbg=0 guifg=#000000 guibg=#BFBFBF
+  highlight PmenuSel       ctermfg=15 ctermbg=8  guifg=#BFBFBF guibg=#000000
+  highlight PmenuSbar      ctermfg=8 guifg=#424242
+  highlight PmenuThumb     ctermfg=0 guifg=#000000
+
+  highlight StatusLine     ctermfg=15 ctermbg=0 cterm=bold guifg=#000000 guibg=#BFBFBF gui=bold
+  highlight StatusLineNC   ctermfg=8 ctermbg=0 guifg=#424242 guibg=#BFBFBF
+
+  highlight BufferCurrent ctermfg=15 ctermbg=0
+  highlight BufferCurrentIndex ctermfg=6 ctermbg=0
+  highlight BufferCurrentMod ctermfg=3 ctermbg=0
+  highlight BufferCurrentSign ctermfg=6 ctermbg=0
+  highlight BufferCurrentTarget ctermfg=1 ctermbg=0 cterm=bold
+
+  highlight BufferVisible ctermfg=15 ctermbg=0
+  highlight BufferVisibleIndex ctermfg=15 ctermbg=0
+  highlight BufferVisibleMod ctermfg=15 ctermbg=0
+  highlight BufferVisibleSign ctermfg=15 ctermbg=0
+  highlight BufferVisibleTarget ctermfg=1 ctermbg=0 cterm=bold
+
+  highlight BufferInactive ctermfg=7 ctermbg=0
+  highlight BufferInactiveIndex ctermfg=8 ctermbg=0
+  highlight BufferInactiveMod ctermfg=3 ctermbg=0
+  highlight BufferInactiveSign ctermfg=8 ctermbg=0
+  highlight BufferInactiveTarget ctermfg=1 ctermbg=0 cterm=bold
+
+  highlight BufferTabpages ctermfg=6 ctermbg=0 cterm=bold
+  highlight BufferTabpageFill ctermfg=8 ctermbg=0
+
+  highlight link BufferCurrentIcon BufferCurrent
+  highlight link BufferVisibleIcon BufferVisible
+  highlight link BufferInactiveIcon BufferInactive
+  highlight link BufferOffset BufferTabpageFill
+endif
 
