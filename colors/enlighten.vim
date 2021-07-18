@@ -34,8 +34,8 @@ highlight Type           ctermfg=2 guifg=#3BBE89
 highlight Special        ctermfg=5 guifg=#CE78F3
 highlight Underlined     ctermfg=5 cterm=underline guifg=#CE78F3 gui=underline
 highlight Ignore         ctermfg=7 guifg=#BFBFBF
-highlight Error          ctermfg=7 ctermbg=1 guifg=#BFBFBF guibg=#E64B6A
-highlight ErrorMsg       ctermfg=7 ctermbg=1 guifg=#BFBFBF guibg=#E64B6A
+highlight Error          ctermfg=15 ctermbg=1 guifg=#BFBFBF guibg=#E64B6A
+highlight ErrorMsg       ctermfg=15 ctermbg=1 guifg=#BFBFBF guibg=#E64B6A
 highlight ModeMsg        cterm=bold gui=bold
 highlight MoreMsg        ctermfg=2 guifg=#3BBE89
 highlight WarningMsg     ctermfg=1 guifg=#E64B6A
