@@ -353,6 +353,12 @@ highlight rubyTodo ctermfg=0 ctermbg=11 cterm=bold guifg=#000000 guibg=#FEF937
 "hi link vimOperParen Normal
 "hi link vimVar Normal
 
+"
+"
+" Plugins
+"
+"
+
 " GitGutter
 highlight!link GitGutterAdd BrightGreen
 highlight!link GitGutterChange BrightBlack
@@ -398,6 +404,8 @@ highlight link BufferVisibleIcon BufferVisible
 highlight link BufferInactiveIcon BufferInactive
 highlight link BufferOffset BufferTabpageFill
 
+highlight IndentBlanklineChar ctermfg=15
+
 if &background ==# 'dark'
   highlight Pmenu          ctermfg=15 ctermbg=0 guifg=#000000 guibg=#BFBFBF
   highlight PmenuSel       ctermfg=15 ctermbg=8  guifg=#BFBFBF guibg=#000000
@@ -407,6 +415,11 @@ if &background ==# 'dark'
   highlight StatusLine     ctermfg=15 ctermbg=0 cterm=bold guifg=#000000 guibg=#BFBFBF gui=bold
   highlight StatusLineNC   ctermfg=8 ctermbg=0 guifg=#424242 guibg=#BFBFBF
 
+  "
+  "
+  " Plugins
+  "
+  "
   highlight BufferCurrent ctermfg=15 ctermbg=0
   highlight BufferCurrentIndex ctermfg=6 ctermbg=0
   highlight BufferCurrentMod ctermfg=3 ctermbg=0
@@ -432,5 +445,7 @@ if &background ==# 'dark'
   highlight link BufferVisibleIcon BufferVisible
   highlight link BufferInactiveIcon BufferInactive
   highlight link BufferOffset BufferTabpageFill
+
+  highlight IndentBlanklineChar ctermfg=0
 endif
 
