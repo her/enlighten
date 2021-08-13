@@ -449,3 +449,20 @@ if &background ==# 'dark'
   highlight IndentBlanklineChar ctermfg=0
 endif
 
+highlight DapUIScope ctermfg=6 guifg=#00F1F5
+highlight DapUIStoppedThread ctermfg=6 guifg=#00f1f5
+highlight DapUIBreakpointsPath ctermfg=6 guifg=#00F1F5
+highlight DapUILineNumber ctermfg=6 guifg=#00f1f5
+highlight DapUIDecoration ctermfg=6 guifg=#00F1F5
+highlight DapUIFloatBorder ctermfg=6 guifg=#00F1F5
+highlight DapUIThread ctermfg=2 guifg=#A9FF68
+highlight DapUIWatchesValue ctermfg=2 guifg=#A9FF68
+highlight DapUIBreakpointsInfo ctermfg=2 guifg=#A9FF68
+highlight DapUIBreakpointsCurrentLine ctermfg=2 guifg=#A9FF68 cterm=bold
+highlight DapUIType ctermfg=5 guifg=#D484FF
+highlight DapUISource ctermfg=5 guifg=#D484FF
+highlight DapUIWatchesEmpty ctermfg=1 guifg=#F70067
+highlight DapUIWatchesError ctermfg=1 guifg=#F70067
+highlight link DapUIBreakpointsLine DapUILineNumber
+highlight link DapUIFrameName Normal
+highlight link DapUIVariable Normal
