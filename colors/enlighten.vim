@@ -52,7 +52,7 @@ highlight Cursor         ctermfg=0 guifg=#000000
 highlight CursorIM       ctermfg=0 guifg=#000000
 highlight StatusLine     ctermfg=0 ctermbg=15 cterm=bold guifg=#000000 guibg=#BFBFBF gui=bold
 highlight StatusLineNC   ctermfg=15 ctermbg=7 guifg=#424242 guibg=#BFBFBF
-highlight VertSplit      ctermfg=8 ctermbg=7 guifg=#424242 guibg=#BFBFBF
+highlight VertSplit      NONE
 highlight Conceal        ctermfg=7 ctermbg=7 guifg=#BFBFBF guibg=#BFBFBF
 highlight DiffAdd        ctermfg=0 ctermbg=2 guifg=#000000 guibg=#3BBE89
 highlight DiffChange     ctermfg=0 ctermbg=3 guifg=#000000 guibg=#000000
@@ -81,7 +81,7 @@ highlight Visual         cterm=inverse ctermbg=NONE gui=inverse guibg=NONE
 " draws.  PmenuSbar and PmenuThumb control the styles of the scrollbar builtin
 " to the menu. Pmenu is the list of items and PmenuSel highlights the selected
 " item.
-"  ------------- 
+" +-------------+
 " | Pmenu     |x|<---- PmenuSbar
 " |-----------|x|
 " | PmenuSel  |x|
@@ -89,7 +89,7 @@ highlight Visual         cterm=inverse ctermbg=NONE gui=inverse guibg=NONE
 " | Pmenu     |x|
 " |           |o|<---- PmenuThumb
 " |           |o|
-"  ------------- 
+" +-------------+
 highlight Pmenu          ctermfg=0 ctermbg=15 guifg=#000000 guibg=#BFBFBF
 highlight PmenuSel       ctermfg=0 ctermbg=7  guifg=#BFBFBF guibg=#000000
 highlight PmenuSbar      ctermfg=7 guifg=#424242
