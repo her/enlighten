@@ -360,10 +360,9 @@ highlight rubyTodo ctermfg=0 ctermbg=11 cterm=bold guifg=#000000 guibg=#FEF937
 "
 
 " GitGutter
-highlight!link GitGutterAdd BrightGreen
-highlight!link GitGutterChange BrightBlack
-highlight!link GitGutterDelete BrightRed
-highlight!link GitGutterChangeDelete BrightMagenta
+highlight GitSignsDelete ctermbg=NONE ctermfg=1
+highlight GitSignsAdd    ctermbg=NONE ctermfg=2
+highlight GitSignsChange ctermbg=NONE ctermfg=3
 
 " netrw
 "hi netrwVersion
