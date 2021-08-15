@@ -20,6 +20,12 @@ function! s:def_base_syntax()
   syntax match baseDelimiter ","
 endfunction
 "===============================================================================
+" Custom Highlight Groups
+highlight Separator ctermfg=15
+highlight Contents ctermfg=NONE ctermbg=15 cterm=bold
+highlight Modified ctermfg=9 ctermbg=15
+highlight NotModified ctermfg=10 ctermbg=15
+
 " Highlight groups
 
 highlight commonOperator ctermfg=4 guifg=#5891F8
@@ -50,7 +56,8 @@ highlight CursorLine     cterm=underline gui=underline
 highlight CursorLineNr   ctermfg=3 guifg=#FD7B31
 highlight Cursor         ctermfg=0 guifg=#000000
 highlight CursorIM       ctermfg=0 guifg=#000000
-highlight StatusLine     ctermfg=0 ctermbg=15 cterm=bold guifg=#000000 guibg=#BFBFBF gui=bold
+" highlight StatusLine     ctermfg=0 ctermbg=15 cterm=bold guifg=#000000 guibg=#BFBFBF gui=bold
+highlight StatusLine     NONE
 highlight StatusLineNC   ctermfg=15 ctermbg=7 guifg=#424242 guibg=#BFBFBF
 highlight VertSplit      NONE
 highlight Conceal        ctermfg=7 ctermbg=7 guifg=#BFBFBF guibg=#BFBFBF
@@ -411,9 +418,14 @@ if &background ==# 'dark'
   highlight PmenuSbar      ctermfg=8 guifg=#424242
   highlight PmenuThumb     ctermfg=0 guifg=#000000
 
-  highlight StatusLine     ctermfg=15 ctermbg=0 cterm=bold guifg=#000000 guibg=#BFBFBF gui=bold
+  "highlight StatusLine     ctermfg=15 ctermbg=0 cterm=bold guifg=#000000 guibg=#BFBFBF gui=bold
+  highlight StatusLine     NONE
   highlight StatusLineNC   ctermfg=8 ctermbg=0 guifg=#424242 guibg=#BFBFBF
 
+  highlight Separator      ctermfg=235
+  highlight Contents       ctermfg=NONE ctermbg=241 cterm=bold
+  highlight Modified       ctermfg=9 ctermbg=241
+  highlight NotModified    ctermfg=10 ctermbg=241
   "
   "
   " Plugins
