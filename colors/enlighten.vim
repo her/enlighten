@@ -57,8 +57,9 @@ highlight CursorLineNr   ctermfg=3 guifg=#FD7B31
 highlight Cursor         ctermfg=0 guifg=#000000
 highlight CursorIM       ctermfg=0 guifg=#000000
 " highlight StatusLine     ctermfg=0 ctermbg=15 cterm=bold guifg=#000000 guibg=#BFBFBF gui=bold
+" highlight StatusLineNC   ctermfg=15 ctermbg=7 guifg=#424242 guibg=#BFBFBF
 highlight StatusLine     NONE
-highlight StatusLineNC   ctermfg=15 ctermbg=7 guifg=#424242 guibg=#BFBFBF
+highlight StatusLineNC   NONE
 highlight VertSplit      NONE
 highlight Conceal        ctermfg=7 ctermbg=7 guifg=#BFBFBF guibg=#BFBFBF
 highlight DiffAdd        ctermfg=0 ctermbg=2 guifg=#000000 guibg=#3BBE89
